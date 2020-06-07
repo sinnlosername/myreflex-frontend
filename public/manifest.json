@@ -1,0 +1,9 @@
+{
+  "short_name": "Reflex Antipiracy Frontend",
+  "name": "Reflex Antipiracy Frontend",
+  "icons": [],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#1890ff",
+  "background_color": "#fafafa"
+}
