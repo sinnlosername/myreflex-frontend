@@ -1,13 +1,37 @@
+@import "src/shared.less";
+
 .outerLayout {
   height: 100vh;
 }
 
+/* Header */
 .header {
   background: @primary-color;
 }
 
+.headerRow {
+  height: 100%;
+}
+
+.headerTitle {
+  font-size: 32px;
+  margin-bottom: 0 !important;
+  font-weight: bold !important;
+  color: @gray-2 !important;
+  cursor: pointer;
+}
+
+.headerTitleCol, .headerMenuCol {
+  height: 100%;
+}
+
+.headerMenuCol {
+  text-align: right;
+}
+
+
 .sider {
-  background: #f5f5f5;
+  background: @gray-3;
 }
 
 .content {
@@ -15,6 +39,7 @@
   overflow: initial;
 }
 
+/* Footer */
 .footer {
   padding: 8px;
   text-align: center;

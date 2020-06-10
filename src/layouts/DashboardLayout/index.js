@@ -1,12 +1,13 @@
 import React from "react";
 import classes from './index.module.less';
-import {Layout, Row, Col, Button} from "antd";
+import {Layout, Row, Col, Button, Typography, Dropdown, Menu} from "antd";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const DashboardLayout = ({children}) => {
   return (
     <Layout className={classes.outerLayout} >
       <Layout.Header className={classes.header}>
-        Header
+        <HeaderRow/>
       </Layout.Header>
 
       <Layout>
@@ -20,13 +21,34 @@ export const DashboardLayout = ({children}) => {
       </Layout>
 
       <Layout.Footer className={classes.footer}>
-        <BottomRow/>
+        <FooterRow/>
       </Layout.Footer>
     </Layout>
   );
 };
 
-const BottomRow = () => {
+const HeaderMenu = () => (
+  <Menu>
+    <Menu.Item key="logout">
+      Logout
+    </Menu.Item>
+  </Menu>
+);
+
+const HeaderRow = () => (
+  <Row align="middle" className={classes.headerRow}>
+    <Col span={18} className={classes.headerTitleCol}>
+      <Typography.Link className={classes.headerTitle} href="https://g.reflex.rip/spigot" target="_blank">Reflex</Typography.Link>
+    </Col>
+    <Col span={6} className={classes.headerMenuCol}>
+      <Dropdown.Button overlay={<HeaderMenu/>} placement="bottomCenter" icon={<FontAwesomeIcon icon="user" />}>
+        Logged in as Name (12345)
+      </Dropdown.Button>
+    </Col>
+  </Row>
+);
+
+const FooterRow = () => {
   return (
     <Row>
       <Col span={6}>
