@@ -11,6 +11,12 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },
+  "devDependencies": {
+    "customize-cra": "^1.0.0",
+    "less": "^3.11.3",
+    "less-loader": "^6.1.0",
+    "react-app-rewired": "^2.1.6"
+  },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
@@ -31,11 +37,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "customize-cra": "^1.0.0",
-    "less": "^3.11.3",
-    "less-loader": "^6.1.0",
-    "react-app-rewired": "^2.1.6"
   }
 }
