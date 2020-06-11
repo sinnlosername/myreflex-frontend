@@ -6,7 +6,8 @@ module.exports = override(
       javascriptEnabled: true,
       modifyVars: {
         'primary-color': '#1890ff',
-        'link-color': '#6FB5B5'
+        'link-color': '#6FB5B5',
+        'font-size-base': '16px'
       }
     }
   })
