@@ -1,7 +1,8 @@
 import React from "react";
-import classes from './index.module.less';
-import {Layout, Row, Col, Button, Typography, Dropdown, Menu} from "antd";
+import classes from './DashboardLayout.module.less';
+import {Layout, Row, Col, Typography, Dropdown, Menu} from "antd";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {Footer} from "./Footer";
 
 export const DashboardLayout = ({children}) => {
   return (
@@ -20,9 +21,7 @@ export const DashboardLayout = ({children}) => {
         </Layout.Content>
       </Layout>
 
-      <Layout.Footer className={classes.footer}>
-        <FooterRow/>
-      </Layout.Footer>
+      <Footer/>
     </Layout>
   );
 };
@@ -47,19 +46,3 @@ const HeaderRow = () => (
     </Col>
   </Row>
 );
-
-const FooterRow = () => {
-  return (
-    <Row>
-      <Col span={6}>
-        Left
-      </Col>
-      <Col span={12}>
-        © {new Date().getFullYear()} - Reflex Developement Team (reflex.rip)
-      </Col>
-      <Col span={6}>
-        <Button className={classes.footerDiscordLink} type="link" href="https://g.reflex.rip/discord" target="_blank">Discord</Button>
-      </Col>
-    </Row>
-  )
-}
