@@ -3,6 +3,7 @@ import {Spin, Form, Col, Row, Typography, Input, Button} from "antd";
 
 import cls from './LoginPage.module.less'
 import {callApi} from "../api/api.js";
+import {useHistory} from "react-router-dom";
 
 export const LoginPage = () => (
   <Row align={"middle"} className={cls.mainRow}>
@@ -21,14 +22,15 @@ export const LoginPage = () => (
 const LoginForm = () => {
   const [spinning, setSpinning] = useState(false);
   const [error, setError] = useState(null);
+  const history = useHistory();
 
-  function onResponse({error, data}) {
+  function onResponse({error}) {
     if (error != null) {
       setError(error);
       return;
     }
 
-    // todo redirect
+    history.push("/a/home");
   }
 
   return (
@@ -47,7 +49,7 @@ const LoginForm = () => {
           className={cls.formItem}
           name="username"
           rules={[{required: true, message: 'This field is required'}]}>
-          <Input prefix={<></>} placeholder="Spigot username" size="large"/>
+          <Input prefix={<></>} placeholder="Spigot username" size="large" autoComplete="username"/>
         </Form.Item>
 
         <Form.Item
@@ -55,7 +57,7 @@ const LoginForm = () => {
           name="password"
           rules={[{required: true, message: 'This field is required'}]}
           extra={"Don't use your spigot password for this!"}>
-          <Input type="password" placeholder="API Password" size="large"/>
+          <Input type="password" placeholder="API Password" size="large" autoComplete="current-password"/>
         </Form.Item>
 
         <FormError message={error} />
