@@ -17,9 +17,8 @@ const App = () => (
       <Route path="/a">
         <DashboardLayout>
           <Switch>
-            <Route path="/a/test" render={() => (<p>test1</p>)} />
-            <Route path="/a/test2" render={() => (<p>test2</p>)} />
-            <Redirect to="/a/test" />
+            <Route path="/a/home" render={() => (<p>home</p>)} />
+            <Redirect to="/a/home" />
           </Switch>
         </DashboardLayout>
       </Route>
