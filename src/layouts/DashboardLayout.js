@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import classes from './DashboardLayout.module.less';
-import {Layout, Row, Col, Typography, Dropdown, Menu} from "antd";
+import {Spin, Layout, Row, Col, Typography, Dropdown, Menu} from "antd";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Footer} from "./Footer";
+import {callApi} from "../api/api";
+import {useHistory} from "react-router-dom";
 
 export const DashboardLayout = ({children}) => {
   return (
@@ -26,13 +28,23 @@ export const DashboardLayout = ({children}) => {
   );
 };
 
-const HeaderMenu = () => (
-  <Menu>
-    <Menu.Item key="logout">
-      Logout
-    </Menu.Item>
-  </Menu>
-);
+const HeaderMenu = () => {
+  const history = useHistory();
+  const [spinning, setSpinning] = useState(false);
+
+  return (
+    <Spin spinning={spinning}>
+      <Menu>
+        <Menu.Item key="logout" onClick={() => {
+          callApi("DELETE", "/auth/me", {}, setSpinning)
+            .then(() => history.push("../login"))
+        }}>
+          Logout
+        </Menu.Item>
+      </Menu>
+    </Spin>
+  );
+}
 
 const HeaderRow = () => (
   <Row align="middle" className={classes.headerRow}>
