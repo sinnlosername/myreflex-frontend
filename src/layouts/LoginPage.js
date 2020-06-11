@@ -24,8 +24,8 @@ const LoginForm = () => {
   const [error, setError] = useState(null);
   const history = useHistory();
 
-  function onResponse({error}) {
-    if (error != null) {
+  function onResponse({error, errorCode}) {
+    if (error != null && errorCode !== "ALREADY_AUTHENTICATED") {
       setError(error);
       return;
     }
