@@ -16,11 +16,11 @@ export async function callApi(method, endpoint, requestData, setSpinning) {
 
 async function doRestCall(method, endpoint, requestData) {
   try {
-    const isLocalTest = process.env.NODE_ENV === "development" && window.location.hostname === "localhost";
+    const isLocalTest = process.env.NODE_ENV === "development";
     const data = await fetch(API_URL + endpoint, {
       method,
       body: JSON.stringify(requestData),
-      credentials: isLocalTest && 'include'
+      credentials: (isLocalTest ? 'include' : undefined)
     }).then(response => response.json());
 
     return {data, errorCode: data.errorCode, error: extractError(data)};
