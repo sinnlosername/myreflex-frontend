@@ -2,8 +2,8 @@ import React, {useState} from "react";
 import classes from './DashboardLayout.module.less';
 import {Spin, Layout, Row, Col, Typography, Dropdown, Menu} from "antd";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {Footer} from "./Footer";
-import {callApi} from "../api/api";
+import {Footer} from "../Footer/Footer";
+import {callApi} from "../../api/api";
 import {useHistory} from "react-router-dom";
 
 export const DashboardLayout = ({children}) => {

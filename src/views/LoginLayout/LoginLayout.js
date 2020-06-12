@@ -2,8 +2,8 @@ import React from "react";
 import classes from './LoginLayout.module.less';
 
 import {Layout, Typography} from "antd";
-import {Footer} from "./Footer";
-import {LoginPage} from "./LoginPage";
+import {Footer} from "../Footer/Footer";
+import {LoginPage} from "./LoginPage/LoginPage";
 
 export const LoginLayout = () => {
   return (

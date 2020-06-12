@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {Spin, Form, Col, Row, Typography, Input, Button} from "antd";
 
 import cls from './LoginPage.module.less'
-import {callApi} from "../api/api.js";
+import {callApi} from "../../../api/api.js";
 import {useHistory} from "react-router-dom";
 
 export const LoginPage = () => (

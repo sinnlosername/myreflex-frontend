@@ -2,8 +2,8 @@ import React from 'react';
 import './App.less';
 
 import {BrowserRouter, Redirect, Switch, Route} from "react-router-dom";
-import {LoginLayout} from "./layouts/LoginLayout";
-import {DashboardLayout} from "./layouts/DashboardLayout";
+import {LoginLayout} from "./views/LoginLayout/LoginLayout";
+import {DashboardLayout} from "./views/DashboardLayout/DashboardLayout";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
