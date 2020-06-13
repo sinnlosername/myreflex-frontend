@@ -6,22 +6,15 @@ import {LoginLayout} from "./views/LoginLayout/LoginLayout";
 import {DashboardLayout} from "./views/DashboardLayout/DashboardLayout";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
+import { faUser, faListAlt, faKey, faThList, faListUl } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faUser);
+[faUser, faListAlt, faKey, faThList, faListUl].forEach(icon => library.add(icon));
 
 const App = () => (
   <BrowserRouter>
     <Switch>
       <Route path="/login" component={LoginLayout}/>
-      <Route path="/a">
-        <DashboardLayout>
-          <Switch>
-            <Route path="/a/home" render={() => (<p>home</p>)} />
-            <Redirect to="/a/home" />
-          </Switch>
-        </DashboardLayout>
-      </Route>
+      <Route path="/a" component={DashboardLayout} />
       <Redirect to="/a" />
     </Switch>
   </BrowserRouter>
