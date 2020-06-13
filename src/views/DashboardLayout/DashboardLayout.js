@@ -60,7 +60,7 @@ const HeaderRow = () => {
       </Col>
       <Col span={6} className={classes.headerMenuCol}>
         <Dropdown.Button overlay={<HeaderMenu/>} placement="bottomCenter" icon={<FontAwesomeIcon icon="user"/>}>
-          Logged in as {user.username} ({user.userId})
+          Logged in as {user.username} ({user["userID"]})
         </Dropdown.Button>
       </Col>
     </Row>
