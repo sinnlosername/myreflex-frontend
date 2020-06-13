@@ -1,5 +1,7 @@
 import React from 'react';
 import {Spin} from "antd";
+import {Redirect} from "react-router-dom";
+
 const API_URL = "https://my.reflex.rip/api/v1";
 
 export async function callApi(method, endpoint, requestData, setSpinning) {
@@ -38,9 +40,12 @@ function extractError({status, errorCode}) {
   if (status !== "error") return;
 
   switch (errorCode) {
-    case "SESSION_INVALID": return "Invalid session";
-    case "CREDENTIALS_INVALID": return "Invalid username or password, you fool";
-    default: return "An unknown error occurred";
+    case "SESSION_INVALID":
+      return "Invalid session";
+    case "CREDENTIALS_INVALID":
+      return "Invalid username or password, you fool";
+    default:
+      return "An unknown error occurred";
   }
 }
 
@@ -54,20 +59,24 @@ export class ApiDataLoader extends React.Component {
     if (props.context == null)
       throw new Error("Property context is missing");
 
-    this.state = {data: null};
+    this.state = {data: null, error: null};
     this.componentDidMount.bind(this);
   }
 
   componentDidMount() {
     callApi("GET", this.props.endpoint, undefined)
-      .then(({data, error}) => {
+      .then(({data, error, errorCode}) => {
         if (this.unmounted) return;
-        if (error != null) {
-          alert("Unable to fetch data from api");
+        if (error == null) {
+          this.setState({data});
           return;
         }
 
-        this.setState({data});
+        if (errorCode === "SESSION_INVALID") {
+          this.setState({error: (<Redirect to="../login"/>)});
+        } else {
+          this.setState({error: "Unable to fetch data from api"});
+        }
       });
   }
 
@@ -83,9 +92,7 @@ export class ApiDataLoader extends React.Component {
           <ContextProvider value={this.state.data}>
             {this.props.children}
           </ContextProvider>
-        ) : (
-          <Spin />
-        )}
+        ) : (this.state.error != null ? this.state.error : (<Spin/>))}
       </>
     );
   }
