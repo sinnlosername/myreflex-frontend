@@ -29,7 +29,7 @@ export const StartupHistoryTable = () => {
       columns={tableColumns}
       dataSource={data.entries.map((data, key) => ({
         key,
-        timestamp: dayjs(data.timestamp).format("DD.MM.YYYY HH:mm:ss"),
+        timestamp: dayjs(data.timestamp).format("DD.MM.YYYY [at] HH:mm:ss"),
         ipAddress: data.ipAddress
       }))}
       pagination={{
