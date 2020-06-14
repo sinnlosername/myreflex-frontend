@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
-import {Button, Row, Col, Typography, Table, Form, Input, Modal} from "antd";
+import {Button, Typography, Table, Form, Input, Modal} from "antd";
 import {ApiDataLoader, callApi} from "../../../shared/api";
-import {WhitelistContext, WhitelistIpContext} from "../../../shared/context";
+import {WhitelistContext} from "../../../shared/context";
 import ipRegex from "ip-regex";
 import cls from './WhitelistPage.module.less';
 import {IpInfoLoader} from "../IpInfo/IpInfo";
@@ -67,12 +67,13 @@ const WhitelistTable = () => {
 
   function doDelete() {
     Modal.confirm({
-      title: "Are you sure you want to delete " + selectedRowKeys.length + " entries?",
+      title: `Are you sure you want to delete ${selectedRowKeys.length} entries?`,
       okText: "Delete",
       okType: "danger",
       cancelText: "Cancel",
-      okOk: callApi("DELETE", "/whitelist/ips", selectedRowKeys)
-        .then(() => reloadData())
+      onOk: () => callApi("PATCH", "/whitelist/ips", {
+        remove: selectedRowKeys.map(key => data.entries[key])
+      }).then(() => reloadData())
     });
   }
 
