@@ -1,18 +1,18 @@
 import React, {useContext} from "react";
 import {Typography, Table} from "antd";
 import {ApiDataLoader} from "../../../shared/api";
-import {ApiHistoryContext} from "../../../shared/context";
+import {LoginHistoryContext} from "../../../shared/context";
 import Bowser from "bowser";
 import dayjs from "dayjs";
 import {BrowserInfo, OsInfo} from "./userAgentInfo";
 
-export const ApiHistoryPage = () => {
+export const LoginHistoryPage = () => {
   return (
     <div>
       <Typography.Title level={2}>API login history</Typography.Title>
 
-      <ApiDataLoader endpoint="/history/api" context={ApiHistoryContext}>
-        <ApiHistoryTable />
+      <ApiDataLoader endpoint="/history/api" context={LoginHistoryContext}>
+        <LoginHistoryTable />
       </ApiDataLoader>
     </div>
   )
@@ -24,8 +24,8 @@ const tableColumns = [
   {title: "Browser", dataIndex: "browser", key: "browser"},
   {title: "Operating System", dataIndex: "os", key: "os"}
 ];
-export const ApiHistoryTable = () => {
-  const {data} = useContext(ApiHistoryContext);
+export const LoginHistoryTable = () => {
+  const {data} = useContext(LoginHistoryContext);
 
   return (
     <Table
