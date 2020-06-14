@@ -7,6 +7,7 @@ import {callApi, ApiDataLoader} from "../../shared/api";
 import {Redirect, Route, Switch, useHistory, useLocation} from "react-router-dom";
 import {UserContext} from "../../shared/context";
 import {WhitelistPage} from "./WhitelistPage/WhitelistPage";
+import {ApiHistoryPage} from "./ApiHistoryPage/ApiHistoryPage";
 
 export const DashboardLayout = ({children}) => {
   return (
@@ -25,7 +26,7 @@ export const DashboardLayout = ({children}) => {
             <Switch>
               <Route path="/a/home" component={WhitelistPage} />
               <Route path="/a/startup-history" render={() => (<p>home2</p>)} />
-              <Route path="/a/login-history" render={() => (<p>home3</p>)} />
+              <Route path="/a/login-history" component={ApiHistoryPage} />
               <Route path="/a/password" render={() => (<p>home4</p>)} />
 
               <Redirect to="/a/home" />

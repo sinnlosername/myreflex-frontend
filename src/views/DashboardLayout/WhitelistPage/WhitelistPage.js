@@ -3,17 +3,13 @@ import {Button, Row, Col, Typography, Table, Form, Input, Modal} from "antd";
 import {ApiDataLoader, callApi} from "../../../shared/api";
 import {WhitelistContext, WhitelistIpContext} from "../../../shared/context";
 import ipRegex from "ip-regex";
-
 import cls from './WhitelistPage.module.less';
 
 const {Title, Text} = Typography;
 
 export const WhitelistPage = () => {
   return (
-    <div style={{
-      height: "100%"
-    }}>
-
+    <div>
       <Title level={2}>IP Whitelist</Title>
       <Text>
         In this panel you can manage what IP addresses can be used to run your Reflex copy.
