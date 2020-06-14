@@ -49,7 +49,7 @@ const LoginForm = () => {
           className={cls.formItem}
           name="username"
           rules={[{required: true, message: 'This field is required'}]}>
-          <Input prefix={<></>} placeholder="Spigot username" size="large" autoComplete="username"/>
+          <Input placeholder="Spigot username" size="large" autoComplete="username"/>
         </Form.Item>
 
         <Form.Item
