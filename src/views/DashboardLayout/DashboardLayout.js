@@ -27,7 +27,7 @@ export const DashboardLayout = () => {
           <Layout.Content className={classes.content}>
             <Switch>
               <Route path="/a/home" component={WhitelistPage} />
-              <Route path="/a/startup-history" render={() => (StartupHistoryPage)} />
+              <Route path="/a/startup-history" component={StartupHistoryPage} />
               <Route path="/a/login-history" component={LoginHistoryPage} />
               <Route path="/a/password" render={() => (<p>home4</p>)} />
 

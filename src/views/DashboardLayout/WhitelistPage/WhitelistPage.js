@@ -4,6 +4,7 @@ import {ApiDataLoader, callApi} from "../../../shared/api";
 import {WhitelistContext, WhitelistIpContext} from "../../../shared/context";
 import ipRegex from "ip-regex";
 import cls from './WhitelistPage.module.less';
+import {IpInfoLoader} from "../IpInfo/IpInfo";
 
 const {Title, Text} = Typography;
 
@@ -96,38 +97,10 @@ const WhitelistTable = () => {
                onChange: setSelectedRowKeys
              }}
              expandable={{
-               expandedRowRender: record => (
-                 <ApiDataLoader endpoint={`/whitelist/ips/${record.ip}`} context={WhitelistIpContext}>
-                   <WhitelistIpInfo/>
-                 </ApiDataLoader>
-               )
+               expandedRowRender: record => (<IpInfoLoader endpoint={`/whitelist/ips/${record.ip}`} />)
              }}
       />
     </>
   )
 }
 
-const WhitelistIpInfo = () => {
-  const {data: info} = useContext(WhitelistIpContext);
-
-  return (
-    <Row>
-      <IpInfoCol name={"Country"} value={info["country"]}/>
-      <IpInfoCol name={"Region"} value={info["regionName"]}/>
-      <IpInfoCol name={"City"} value={info["city"]}/>
-      <IpInfoCol name={"ZIP"} value={info["zip"]}/>
-
-      <IpInfoCol name={"ISP"} value={info["isp"]}/>
-      <IpInfoCol name={"AS"} value={info["as"]}/>
-
-      <IpInfoCol name={"Organisation"} value={info["org"]}/>
-    </Row>
-  );
-}
-
-const IpInfoCol = ({name, value}) => (
-  <>
-    <Col span={8} md={4}><Text strong={true}>{name}</Text></Col>
-    <Col span={16} md={8}>{value}</Col>
-  </>
-);
