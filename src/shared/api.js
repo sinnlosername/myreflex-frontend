@@ -64,18 +64,22 @@ export class ApiDataLoader extends React.Component {
   }
 
   componentDidMount() {
+    this.reloadData();
+  }
+
+  reloadData() {
     callApi("GET", this.props.endpoint, undefined)
       .then(({data, error, errorCode}) => {
         if (this.unmounted) return;
         if (error == null) {
-          this.setState({data});
+          this.setState({data, error: null});
           return;
         }
 
         if (errorCode === "SESSION_INVALID") {
-          this.setState({error: (<Redirect to="../login"/>)});
+          this.setState({data: null, error: (<Redirect to="../login"/>)});
         } else {
-          this.setState({error: "Unable to fetch data from api"});
+          this.setState({data: null, error: "Unable to fetch data from api"});
         }
       });
   }
@@ -89,10 +93,13 @@ export class ApiDataLoader extends React.Component {
     return (
       <>
         {this.state.data != null ? (
-          <ContextProvider value={this.state.data}>
+          <ContextProvider value={{
+            reloadData: this.reloadData.bind(this),
+            data: this.state.data
+          }}>
             {this.props.children}
           </ContextProvider>
-        ) : (this.state.error != null ? this.state.error : (<Spin/>))}
+        ) : (this.state.error != null ? this.state.error : (<Spin style={{width: "100%"}} />))}
       </>
     );
   }

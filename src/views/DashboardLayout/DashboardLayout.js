@@ -6,6 +6,7 @@ import {Footer} from "../Footer/Footer";
 import {callApi, ApiDataLoader} from "../../shared/api";
 import {Redirect, Route, Switch, useHistory, useLocation} from "react-router-dom";
 import {UserContext} from "../../shared/context";
+import {WhitelistPage} from "./WhitelistPage/WhitelistPage";
 
 export const DashboardLayout = ({children}) => {
   return (
@@ -22,7 +23,7 @@ export const DashboardLayout = ({children}) => {
 
           <Layout.Content className={classes.content}>
             <Switch>
-              <Route path="/a/home" render={() => (<p>home1</p>)} />
+              <Route path="/a/home" component={WhitelistPage} />
               <Route path="/a/startup-history" render={() => (<p>home2</p>)} />
               <Route path="/a/login-history" render={() => (<p>home3</p>)} />
               <Route path="/a/password" render={() => (<p>home4</p>)} />
@@ -70,7 +71,7 @@ const HeaderMenu = () => {
 }
 
 const HeaderRow = () => {
-  const user = useContext(UserContext);
+  const {data: user} = useContext(UserContext);
 
   return (
     <Row align="middle" className={classes.headerRow}>
