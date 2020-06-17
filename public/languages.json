@@ -1,0 +1,17 @@
+[
+  {
+    "name": "English",
+    "iso3": "eng",
+    "default": true,
+    "keys": {
+      "helloWorld": "Hello world!"
+    }
+  },
+  {
+    "name": "Deutsch",
+    "iso3": "ger",
+    "keys": {
+      "helloWorld": "Hallo Kartoffel!"
+    }
+  }
+]

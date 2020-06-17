@@ -1,13 +1,24 @@
-import {Button, Col, Layout, Row} from "antd";
+import {Button, Col, Layout, Select, Row} from "antd";
 import classes from "./Footer.module.less";
 import React from "react";
+import {useTranslation} from "../../shared/i18n";
 
 export const Footer = () => {
+  const {translationInfo, updateTranslations} = useTranslation();
+
   return (
     <Layout.Footer className={classes.footer}>
       <Row>
         <Col span={6}>
-          Left
+          <Select defaultValue={translationInfo.currentLanguage["iso3"]} size={"small"} onChange={newValue => {
+            translationInfo.currentLanguage = translationInfo.getLanguage(newValue);
+            updateTranslations();
+          }}>
+            {translationInfo.languages.map(language => {
+              return (<Select.Option key={language["iso3"]}
+                                     value={language["iso3"]}>{language.svg}&nbsp;{language.name}</Select.Option>)
+            })}
+          </Select>
         </Col>
         <Col span={12}>
           © {new Date().getFullYear()} - Reflex Developement Team (reflex.rip)
