@@ -10,9 +10,10 @@ import {Trans, useTranslation} from "../../../shared/i18n";
 const {Title, Text} = Typography;
 
 export const WhitelistPage = () => {
+  const {t} = useTranslation();
   return (
     <div>
-      <Title level={2}>IP Whitelist</Title>#
+      <Title level={2}>{t("dashboard.ipWhitelist")}</Title>
       <Trans name="ipWhitelist.infoText" component={Text}/>
       <br/><br/>
 
