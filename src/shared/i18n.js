@@ -3,7 +3,8 @@ import {useContext} from "react";
 import {TranslationContext} from "./context";
 
 export function useTranslation() {
-  const {translationInfo, updateTranslations} = useContext(TranslationContext);
+  const contextValue = useContext(TranslationContext);
+  const {translationInfo, updateTranslations} = contextValue
 
   if (translationInfo == null) {
     throw new Error("Translation context unavailable");
@@ -12,12 +13,23 @@ export function useTranslation() {
   return {
     translationInfo,
     updateTranslations,
-    t: (key) => translationInfo.getTranslation(key),
+    t: (key, ...args) => {
+      return translationInfo.getTranslation(key).replace(/{(\d+)}/g, (match, number) => {
+        return typeof args[number] != 'undefined' ? args[number] : match;
+      });
+    },
+    attach: (component) => {
+      return (
+        <TranslationContext.Provider value={contextValue}>
+          {component}
+        </TranslationContext.Provider>
+      )
+    }
   }
 }
 
 export const Trans = ({component, name}) => {
-  const [t] = useTranslation();
+  const {t} = useTranslation();
   return component != null ? (<component>{t(name)}</component>) : (<>{t(name)}</>);
 }
 
