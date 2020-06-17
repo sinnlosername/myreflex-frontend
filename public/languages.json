@@ -4,14 +4,56 @@
     "iso3": "eng",
     "default": true,
     "keys": {
-      "helloWorld": "Hello world!"
+      "helloWorld": "Hello world!",
+      "reflexDevTeam": "Reflex Developement Team (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "Sign In",
+      "spigotUsername": "Spigot username",
+      "apiPassword": "API Password",
+      "ipAddress": "IP address",
+      "add": "Add",
+      "cancel": "Cancel",
+      "delete": "Delete",
+      "logout": "Logout",
+      "timestamp": "Timestamp",
+      "browser": "Browser",
+      "operatingSystem": "Operating System",
+      "fullDateFormat": "DD.MM.YYYY [at] HH:mm:ss",
+      "country": "Country",
+      "regionName": "Region",
+      "city": "City",
+      "zip": "ZIP",
+      "isp": "ISP",
+      "as": "AS",
+      "org": "Organisation",
+
+      "ipInfo.unavailable": "There is no information available about this ip address.",
+
+      "dashboard.ipWhitelist": "IP Whitelist",
+      "dashboard.reflexStartupHistory": "Reflex startup history",
+      "dashboard.apiLoginHistory": "API login history",
+      "dashboard.changeApiPassword": "Change API password",
+
+      "dashboard.loggedInAs": "Logged in as {0} ({1})",
+
+      "login.helloText": "Welcome! In this panel you can manage your Reflex account details, access, and more. If you have any questions please contact us in Discord.",
+      "login.notSpigotPass": "Don't use your spigot password for this!",
+      "login.doLogin": "LETS GO",
+
+      "ipWhitelist.infoText": "In this panel you can manage which IP addresses can be used to run your Reflex copy. This way you can prevent your copy from being compromised. Make sure IPs of all your servers where you can use Reflex are here.",
+      "ipWhitelist.mustBeIp": "The value must be a valid IP address",
+      "ipWhitelist.addIpAddress": "Add new IP address",
+      "ipWhitelist.sureDelete": "Are you sure you want to delete {0} entries?",
+
+      "validation.fieldRequired": "This field is required"
     }
   },
   {
     "name": "Deutsch",
     "iso3": "ger",
     "keys": {
-      "helloWorld": "Hallo Kartoffel!"
+      "helloWorld": "Hallo Kartoffel!",
+      "reflexDevTeam": "Reflex Entwicklungsteam (reflex.rip)"
     }
   }
 ]

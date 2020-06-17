@@ -6,16 +6,18 @@ import {LoginLayout} from "./views/LoginLayout/LoginLayout";
 import {DashboardLayout} from "./views/DashboardLayout/DashboardLayout";
 import {TranslationLoader} from "./shared/i18n";
 
-const App = () => (
-  <TranslationLoader src="/languages.json">
-    <BrowserRouter>
-      <Switch>
-        <Route path="/login" component={LoginLayout}/>
-        <Route path="/a" component={DashboardLayout} />
-        <Redirect to="/a" />
-      </Switch>
-    </BrowserRouter>
-  </TranslationLoader>
-);
+const App = () => {
+  return (
+    <TranslationLoader src="/languages.json">
+      <BrowserRouter>
+        <Switch>
+          <Route path="/login" component={LoginLayout}/>
+          <Route path="/a" component={DashboardLayout}/>
+          <Redirect to="/a"/>
+        </Switch>
+      </BrowserRouter>
+    </TranslationLoader>
+  );
+};
 
 export default App;

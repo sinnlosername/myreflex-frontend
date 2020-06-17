@@ -5,18 +5,15 @@ import {WhitelistContext} from "../../../shared/context";
 import ipRegex from "ip-regex";
 import cls from './WhitelistPage.module.less';
 import {IpInfoLoader} from "../IpInfo/IpInfo";
+import {Trans, useTranslation} from "../../../shared/i18n";
 
 const {Title, Text} = Typography;
 
 export const WhitelistPage = () => {
   return (
     <div>
-      <Title level={2}>IP Whitelist</Title>
-      <Text>
-        In this panel you can manage what IP addresses can be used to run your Reflex copy.
-        This way you can prevent your copy from being compromised. Make sure IPs of all
-        your servers where you can use Reflex are here.
-      </Text>
+      <Title level={2}>IP Whitelist</Title>#
+      <Trans name="ipWhitelist.infoText" component={Text}/>
       <br/><br/>
 
       <ApiDataLoader endpoint="/whitelist/ips" context={WhitelistContext}>
@@ -27,37 +24,42 @@ export const WhitelistPage = () => {
 }
 
 const WhitelistAdd = ({form}) => {
+  const {t} = useTranslation();
+
   return (
     <Form form={form} name="login" layout="inline">
       <Form.Item
         name="ip"
         className={cls.addFormItem}
         rules={[
-          {required: true, message: 'This field is required'},
-          {pattern: ipRegex.v4({exact: true}), message: 'The value must be a valid ip address'}
+          {required: true, message: t("validation.fieldRequired")},
+          {pattern: ipRegex.v4({exact: true}), message: t("ipWhitelist.mustBeIp")}
         ]}>
-        <Input placeholder="IP address" size="large"/>
+        <Input placeholder={t("ipAddress")} size="large"/>
       </Form.Item>
     </Form>
   );
 }
 
-const tableColumns = [
-  {title: "IP", dataIndex: "ip", key: "ip"}
-];
+
 const WhitelistTable = () => {
+  const {t, attach} = useTranslation();
   const {data, reloadData} = useContext(WhitelistContext);
   const [selectedRowKeys, setSelectedRowKeys] = useState([]);
   const [addForm] = Form.useForm();
 
+  const tableColumns = [
+    {title: t("ipAddress"), dataIndex: "ip", key: "ip"}
+  ];
+
   function doAdd() {
     Modal.confirm({
-      title: "Add new ip address",
-      content: (<WhitelistAdd form={addForm}/>),
+      title: t("ipWhitelist.addIpAddress"),
+      content: attach(<WhitelistAdd form={addForm}/>),
       icon: null,
-      okText: "Add",
+      okText: t("add"),
       okButtonProps: {size: "large"},
-      cancelText: "Cancel",
+      cancelText: t("cancel"),
       cancelButtonProps: {size: "large"},
       onOk: () => addForm.validateFields()
         .then(fields => callApi("POST", "/whitelist/ips/" + fields.ip, {}))
@@ -67,10 +69,10 @@ const WhitelistTable = () => {
 
   function doDelete() {
     Modal.confirm({
-      title: `Are you sure you want to delete ${selectedRowKeys.length} entries?`,
-      okText: "Delete",
+      title: t("ipWhitelist.sureDelete", selectedRowKeys.length),
+      okText: t("delete"),
       okType: "danger",
-      cancelText: "Cancel",
+      cancelText: t("cancel"),
       onOk: () => callApi("PATCH", "/whitelist/ips", {
         remove: selectedRowKeys.map(key => data.entries[key])
       }).then(() => reloadData())
@@ -81,10 +83,10 @@ const WhitelistTable = () => {
     <>
       <div className={cls.tableButtonRow}>
         <Button type="primary" size="large" onClick={doAdd}>
-          Add
+          {t("add")}
         </Button>
         <Button type="primary" size="large" onClick={doDelete} disabled={selectedRowKeys.length === 0}>
-          Delete
+          {t("delete")}
         </Button>
       </div>
       <Table columns={tableColumns}

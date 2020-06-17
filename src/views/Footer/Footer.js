@@ -4,7 +4,7 @@ import React from "react";
 import {useTranslation} from "../../shared/i18n";
 
 export const Footer = () => {
-  const {translationInfo, updateTranslations} = useTranslation();
+  const {t, translationInfo, updateTranslations} = useTranslation();
 
   return (
     <Layout.Footer className={classes.footer}>
@@ -21,7 +21,7 @@ export const Footer = () => {
           </Select>
         </Col>
         <Col span={12}>
-          © {new Date().getFullYear()} - Reflex Developement Team (reflex.rip)
+          © {new Date().getFullYear()} - {t("reflexDevTeam")}
         </Col>
         <Col span={6}>
           <Button className={classes.footerDiscordLink} type="link" href="https://g.reflex.rip/discord"

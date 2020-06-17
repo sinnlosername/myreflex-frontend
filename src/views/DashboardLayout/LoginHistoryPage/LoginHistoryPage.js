@@ -5,11 +5,13 @@ import {LoginHistoryContext} from "../../../shared/context";
 import Bowser from "bowser";
 import dayjs from "dayjs";
 import {BrowserInfo, OsInfo} from "./userAgentInfo";
+import {useTranslation} from "../../../shared/i18n";
 
 export const LoginHistoryPage = () => {
+  const {t} = useTranslation();
   return (
     <div>
-      <Typography.Title level={2}>API login history</Typography.Title>
+      <Typography.Title level={2}>{t("dashboard.apiLoginHistory")}</Typography.Title>
 
       <ApiDataLoader endpoint="/history/api" context={LoginHistoryContext}>
         <LoginHistoryTable />
@@ -18,14 +20,16 @@ export const LoginHistoryPage = () => {
   )
 }
 
-const tableColumns = [
-  {title: "Timestamp", dataIndex: "timestamp", key: "timestamp"},
-  {title: "IP address", dataIndex: "ipAddress", key: "ipAddress"},
-  {title: "Browser", dataIndex: "browser", key: "browser"},
-  {title: "Operating System", dataIndex: "os", key: "os"}
-];
 export const LoginHistoryTable = () => {
   const {data} = useContext(LoginHistoryContext);
+  const {t} = useTranslation();
+
+  const tableColumns = [
+    {title: t("timestamp"), dataIndex: "timestamp", key: "timestamp"},
+    {title: t("ipAddress"), dataIndex: "ipAddress", key: "ipAddress"},
+    {title: t("browser"), dataIndex: "browser", key: "browser"},
+    {title: t("operatingSystem"), dataIndex: "os", key: "os"}
+  ];
 
   return (
     <Table
@@ -35,7 +39,7 @@ export const LoginHistoryTable = () => {
 
         return ({
           key,
-          timestamp: dayjs(data.timestamp).format("DD.MM.YYYY [at] HH:mm:ss"),
+          timestamp: dayjs(data.timestamp).format(t("fullDateFormat")),
           ipAddress: data.ipAddress,
           browser: (<BrowserInfo browser={browser} />),
           os: (<OsInfo browser={browser} />)

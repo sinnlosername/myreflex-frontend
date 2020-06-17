@@ -10,6 +10,7 @@ import {WhitelistPage} from "./WhitelistPage/WhitelistPage";
 import {LoginHistoryPage} from "./LoginHistoryPage/LoginHistoryPage";
 import {StartupHistoryPage} from "./StartupHistoryPage/StartupHistoryPage";
 import {faKey, faListAlt, faListUl, faThList, faUser} from "@fortawesome/free-solid-svg-icons";
+import {useTranslation} from "../../shared/i18n";
 
 export const DashboardLayout = () => {
   return (
@@ -42,20 +43,22 @@ export const DashboardLayout = () => {
 };
 
 const SiderMenu = () => {
+  const {t} = useTranslation();
   const location = useLocation();
   const history = useHistory();
 
   return (
     <Menu mode="inline" defaultSelectedKeys={[location.pathname]} onSelect={entry => history.push(entry.key)}>
-      <Menu.Item key="/a/home" icon={<FontAwesomeIcon icon={faListAlt} />}>&nbsp;IP Whitelist</Menu.Item>
-      <Menu.Item key="/a/startup-history" icon={<FontAwesomeIcon icon={faThList} />}>&nbsp;Reflex startup history</Menu.Item>
-      <Menu.Item key="/a/login-history" icon={<FontAwesomeIcon icon={faListUl} />}>&nbsp;API login history</Menu.Item>
-      <Menu.Item key="/a/password" icon={<FontAwesomeIcon icon={faKey} />}>&nbsp;Change API password</Menu.Item>
+      <Menu.Item key="/a/home" icon={<FontAwesomeIcon icon={faListAlt} />}>&nbsp;{t("dashboard.ipWhitelist")}</Menu.Item>
+      <Menu.Item key="/a/startup-history" icon={<FontAwesomeIcon icon={faThList} />}>&nbsp;{t("dashboard.reflexStartupHistory")}</Menu.Item>
+      <Menu.Item key="/a/login-history" icon={<FontAwesomeIcon icon={faListUl} />}>&nbsp;{t("dashboard.apiLoginHistory")}</Menu.Item>
+      <Menu.Item key="/a/password" icon={<FontAwesomeIcon icon={faKey} />}>&nbsp;C{t("dashboard.changeApiPassword")}</Menu.Item>
     </Menu>
   );
 }
 
 const HeaderMenu = () => {
+  const {t} = useTranslation();
   const history = useHistory();
   const [spinning, setSpinning] = useState(false);
 
@@ -66,7 +69,7 @@ const HeaderMenu = () => {
           callApi("DELETE", "/auth/me", {}, setSpinning)
             .then(() => history.push("../login"))
         }}>
-          Logout
+          {t("logout")}
         </Menu.Item>
       </Menu>
     </Spin>
@@ -74,17 +77,18 @@ const HeaderMenu = () => {
 }
 
 const HeaderRow = () => {
+  const {t} = useTranslation();
   const {data: user} = useContext(UserContext);
 
   return (
     <Row align="middle" className={classes.headerRow}>
       <Col span={18} className={classes.headerTitleCol}>
         <Typography.Link className={classes.headerTitle} href="https://g.reflex.rip/spigot"
-                         target="_blank">Reflex</Typography.Link>
+                         target="_blank">{t("reflex")}</Typography.Link>
       </Col>
       <Col span={6} className={classes.headerMenuCol}>
         <Dropdown.Button overlay={<HeaderMenu/>} placement="bottomCenter" icon={<FontAwesomeIcon icon={faUser}/>}>
-          Logged in as {user.username} ({user["userID"]})
+          {t("dashboard.loggedInAs", user.username, user["userID"])}
         </Dropdown.Button>
       </Col>
     </Row>

@@ -4,11 +4,13 @@ import {ApiDataLoader} from "../../../shared/api";
 import {StartupHistoryContext} from "../../../shared/context";
 import dayjs from "dayjs";
 import {IpInfoLoader} from "../IpInfo/IpInfo";
+import {useTranslation} from "../../../shared/i18n";
 
 export const StartupHistoryPage = () => {
+  const {t} = useTranslation();
   return (
     <div>
-      <Typography.Title level={2}>Startup login history</Typography.Title>
+      <Typography.Title level={2}>{t("dashboard.reflexStartupHistory")}</Typography.Title>
 
       <ApiDataLoader endpoint="/history/reflex" context={StartupHistoryContext}>
         <StartupHistoryTable/>
@@ -17,19 +19,21 @@ export const StartupHistoryPage = () => {
   )
 }
 
-const tableColumns = [
-  {title: "Timestamp", dataIndex: "timestamp", key: "timestamp"},
-  {title: "IP address", dataIndex: "ipAddress", key: "ipAddress"}
-];
+
 export const StartupHistoryTable = () => {
+  const {t} = useTranslation();
   const {data} = useContext(StartupHistoryContext);
+  const tableColumns = [
+    {title: t("timestamp"), dataIndex: "timestamp", key: "timestamp"},
+    {title: t("ipAddress"), dataIndex: "ipAddress", key: "ipAddress"}
+  ];
 
   return (
     <Table
       columns={tableColumns}
       dataSource={data.entries.map((data, key) => ({
         key,
-        timestamp: dayjs(data.timestamp).format("DD.MM.YYYY [at] HH:mm:ss"),
+        timestamp: dayjs(data.timestamp).format(t("fullDateFormat")),
         ipAddress: data.ipAddress
       }))}
       pagination={{
