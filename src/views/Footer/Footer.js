@@ -15,8 +15,7 @@ export const Footer = () => {
             updateTranslations();
           }}>
             {translationInfo.languages.map(language => {
-              return (<Select.Option key={language["iso3"]}
-                                     value={language["iso3"]}>{language.svg}&nbsp;{language.name}</Select.Option>)
+              return (<Select.Option key={language["iso3"]} value={language["iso3"]}>{language.name}</Select.Option>)
             })}
           </Select>
         </Col>

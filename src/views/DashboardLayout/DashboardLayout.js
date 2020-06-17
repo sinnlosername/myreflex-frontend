@@ -52,7 +52,7 @@ const SiderMenu = () => {
       <Menu.Item key="/a/home" icon={<FontAwesomeIcon icon={faListAlt} />}>&nbsp;{t("dashboard.ipWhitelist")}</Menu.Item>
       <Menu.Item key="/a/startup-history" icon={<FontAwesomeIcon icon={faThList} />}>&nbsp;{t("dashboard.reflexStartupHistory")}</Menu.Item>
       <Menu.Item key="/a/login-history" icon={<FontAwesomeIcon icon={faListUl} />}>&nbsp;{t("dashboard.apiLoginHistory")}</Menu.Item>
-      <Menu.Item key="/a/password" icon={<FontAwesomeIcon icon={faKey} />}>&nbsp;C{t("dashboard.changeApiPassword")}</Menu.Item>
+      <Menu.Item key="/a/password" icon={<FontAwesomeIcon icon={faKey} />}>&nbsp;{t("dashboard.changeApiPassword")}</Menu.Item>
     </Menu>
   );
 }
