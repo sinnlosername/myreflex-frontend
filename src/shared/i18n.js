@@ -28,9 +28,9 @@ export function useTranslation() {
   }
 }
 
-export const Trans = ({component, name}) => {
+export const Trans = ({component: Component, name}) => {
   const {t} = useTranslation();
-  return component != null ? (<component>{t(name)}</component>) : (<>{t(name)}</>);
+  return Component != null ? (<Component>{t(name)}</Component>) : (<>{t(name)}</>);
 }
 
 export class TranslationLoader extends React.Component {
