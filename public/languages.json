@@ -55,7 +55,13 @@
       "passwordChange.oldPassword": "Old password",
       "passwordChange.newPassword": "New password",
       "passwordChange.action": "Change password",
-      "passwordChange.success": "Your password has been changed. Press 'Okay' to return to the login"
+      "passwordChange.success": "Your password has been changed. Press 'Okay' to return to the login",
+
+      "errors.sessionInvalid": "Invalid session",
+      "errors.credentialsInvalid": "Invalid username or password",
+      "errors.oldPasswordIsEqualToNew": "The passwords are identical.",
+      "errors.oldPasswordIsIncorrect": "The old password is incorrect.",
+      "errors.default": "An unknown error occurred"
     }
   },
   {
