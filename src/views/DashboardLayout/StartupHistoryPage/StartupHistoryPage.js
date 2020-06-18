@@ -1,10 +1,10 @@
 import React, {useContext} from "react";
 import {Table, Typography} from "antd";
-import {ApiDataLoader} from "../../../shared/api";
 import {StartupHistoryContext} from "../../../shared/context";
 import dayjs from "dayjs";
 import {IpInfoLoader} from "../IpInfo/IpInfo";
 import {useTranslation} from "../../../shared/i18n";
+import ApiDataLoader from "../../../shared/ApiDataLoader";
 
 export const StartupHistoryPage = () => {
   const {t} = useTranslation();

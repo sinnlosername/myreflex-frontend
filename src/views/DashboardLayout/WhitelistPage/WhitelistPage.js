@@ -1,11 +1,12 @@
 import React, {useContext, useState} from "react";
 import {Button, Typography, Table, Form, Input, Modal} from "antd";
-import {ApiDataLoader, callApi} from "../../../shared/api";
+import {callApi} from "../../../shared/api";
 import {WhitelistContext} from "../../../shared/context";
 import ipRegex from "ip-regex";
 import cls from './WhitelistPage.module.less';
 import {IpInfoLoader} from "../IpInfo/IpInfo";
 import {Trans, useTranslation} from "../../../shared/i18n";
+import ApiDataLoader from "../../../shared/ApiDataLoader";
 
 const {Title, Text} = Typography;
 

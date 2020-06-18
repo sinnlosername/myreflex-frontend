@@ -1,11 +1,11 @@
 import React, {useContext} from "react";
 import {Typography, Table} from "antd";
-import {ApiDataLoader} from "../../../shared/api";
 import {LoginHistoryContext} from "../../../shared/context";
 import Bowser from "bowser";
 import dayjs from "dayjs";
 import {BrowserInfo, OsInfo} from "./userAgentInfo";
 import {useTranslation} from "../../../shared/i18n";
+import ApiDataLoader from "../../../shared/ApiDataLoader";
 
 export const LoginHistoryPage = () => {
   const {t} = useTranslation();

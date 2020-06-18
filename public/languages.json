@@ -15,6 +15,7 @@
       "cancel": "Cancel",
       "delete": "Delete",
       "logout": "Logout",
+      "okay": "Okay",
       "timestamp": "Timestamp",
       "browser": "Browser",
       "operatingSystem": "Operating System",
@@ -26,6 +27,8 @@
       "isp": "ISP",
       "as": "AS",
       "org": "Organisation",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
 
       "ipInfo.unavailable": "There is no information available about this ip address.",
 
@@ -44,6 +47,7 @@
       "ipWhitelist.mustBeIp": "The value must be a valid IP address",
       "ipWhitelist.addIpAddress": "Add new IP address",
       "ipWhitelist.sureDelete": "Are you sure you want to delete {0} entries?",
+      "ipWhitelist.cannotDisable": "You are not allowed to disable the whitelist due to the administrators settings. Please contact the support for further information.",
 
       "validation.fieldRequired": "This field is required"
     }

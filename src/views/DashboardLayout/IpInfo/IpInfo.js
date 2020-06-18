@@ -1,8 +1,8 @@
 import React, {useContext} from "react";
 import {IpInfoContext} from "../../../shared/context";
 import {Typography, Col, Row} from "antd";
-import {ApiDataLoader} from "../../../shared/api";
 import {useTranslation} from "../../../shared/i18n";
+import ApiDataLoader from "../../../shared/ApiDataLoader";
 
 export const IpInfoLoader = ({endpoint}) => {
   return (

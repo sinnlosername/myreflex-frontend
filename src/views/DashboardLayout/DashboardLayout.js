@@ -3,7 +3,7 @@ import classes from './DashboardLayout.module.less';
 import {Spin, Layout, Row, Col, Typography, Dropdown, Menu} from "antd";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Footer} from "../Footer/Footer";
-import {callApi, ApiDataLoader} from "../../shared/api";
+import {callApi} from "../../shared/api";
 import {Redirect, Route, Switch, useHistory, useLocation} from "react-router-dom";
 import {UserContext} from "../../shared/context";
 import {WhitelistPage} from "./WhitelistPage/WhitelistPage";
@@ -11,6 +11,8 @@ import {LoginHistoryPage} from "./LoginHistoryPage/LoginHistoryPage";
 import {StartupHistoryPage} from "./StartupHistoryPage/StartupHistoryPage";
 import {faKey, faListAlt, faListUl, faThList, faUser} from "@fortawesome/free-solid-svg-icons";
 import {useTranslation} from "../../shared/i18n";
+import {WhitelistSwitch} from "./WhitelistSwitch/WhitelistSwitch";
+import ApiDataLoader from "../../shared/ApiDataLoader";
 
 export const DashboardLayout = () => {
   return (
@@ -49,7 +51,9 @@ const SiderMenu = () => {
 
   return (
     <Menu mode="inline" defaultSelectedKeys={[location.pathname]} onSelect={entry => history.push(entry.key)}>
-      <Menu.Item key="/a/home" icon={<FontAwesomeIcon icon={faListAlt} />}>&nbsp;{t("dashboard.ipWhitelist")}</Menu.Item>
+      <Menu.Item key="/a/home" icon={<FontAwesomeIcon icon={faListAlt} />}>
+        &nbsp;{t("dashboard.ipWhitelist")}<WhitelistSwitch/>
+      </Menu.Item>
       <Menu.Item key="/a/startup-history" icon={<FontAwesomeIcon icon={faThList} />}>&nbsp;{t("dashboard.reflexStartupHistory")}</Menu.Item>
       <Menu.Item key="/a/login-history" icon={<FontAwesomeIcon icon={faListUl} />}>&nbsp;{t("dashboard.apiLoginHistory")}</Menu.Item>
       <Menu.Item key="/a/password" icon={<FontAwesomeIcon icon={faKey} />}>&nbsp;{t("dashboard.changeApiPassword")}</Menu.Item>
