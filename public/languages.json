@@ -63,7 +63,57 @@
     "iso3": "ger",
     "keys": {
       "helloWorld": "Hallo Kartoffel!",
-      "reflexDevTeam": "Reflex Entwicklungsteam (reflex.rip)"
+      "reflexDevTeam": "Reflex Entwicklungsteam (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "Anmelden",
+      "spigotUsername": "Spigot-Nutzername",
+      "apiPassword": "API-Passwort",
+      "ipAddress": "IP-Adresse",
+      "add": "Hinzufügen",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "logout": "Abmelden",
+      "okay": "Okay",
+      "timestamp": "Zeitpunkt",
+      "browser": "Browser",
+      "operatingSystem": "Betriebssystem",
+      "fullDateFormat": "DD.MM.YYYY [um] HH:mm:ss",
+      "country": "Land",
+      "regionName": "Region",
+      "city": "Stadt",
+      "zip": "PLZ",
+      "isp": "ISP",
+      "as": "AS",
+      "org": "Organisation",
+      "enabled": "Aktiviert",
+      "disabled": "Deaktiviert",
+
+      "ipInfo.unavailable": "Zu dieser IP-Adresse sind keine Informationen verfügbar.",
+
+      "dashboard.ipWhitelist": "IP Whitelist",
+      "dashboard.reflexStartupHistory": "Reflex-Startverlauf",
+      "dashboard.apiLoginHistory": "API-Loginverlauf",
+      "dashboard.changeApiPassword": "API-Passwort ändern",
+
+      "dashboard.loggedInAs": "Angemeldet als {0} ({1})",
+
+      "login.helloText": "Willkommen! In diesem Panel kannst Du deine Reflex-Account-Details, Zugriffsberechtigungen und mehr verwalten. Wenn Du Fragen oder Wünsche hast, schreibe uns gerne eine Nachricht auf Discord.",
+      "login.notSpigotPass": "Bitte nutze dafür nicht dein Spigot-Passwort!",
+      "login.doLogin": "LOS GEHTS",
+
+      "ipWhitelist.infoText": "In diesem Panel kannst Du einstellen, welche IP-Adressen deine Reflex-Version starten dürfen. Damit kannst Du verhindern, dass Deine Kopie von Reflex ohne Deine Erlaubnis genutzt wird. Denk daran, alle Server einzutragen, auf denen Du Reflex nutzt.",
+      "ipWhitelist.mustBeIp": "Deine Eingabe muss eine gültige IP-Adresse sein.",
+      "ipWhitelist.addIpAddress": "Neue IP-Adresse hinzufügen",
+      "ipWhitelist.sureDelete": "Bist Du dir sicher, dass Du {0} Einträge löschen möchtest?",
+      "ipWhitelist.cannotDisable": "Aufgrund einer Administrationsrichtlinie kannst Du die Whitelist nicht deaktivieren. Kontaktiere den Support für weitere Informationen.",
+
+      "validation.fieldRequired": "Dieses Feld wird benötigt",
+
+      "passwordChange.infoText": "Die Änderung Deines Passworts wird alle laufenden API-Sitzungen beenden, daher musst Du Dich nach Änderung erneut anmelden.",
+      "passwordChange.oldPassword": "Altes Passwort",
+      "passwordChange.newPassword": "Neues Passwort",
+      "passwordChange.action": "Passwort ändern",
+      "passwordChange.success": "Dein Passwort wurde geändert. Drücke 'Okay', um zur Anmeldung zurückzukehren."
     }
   }
 ]
