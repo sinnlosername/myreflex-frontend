@@ -49,7 +49,13 @@
       "ipWhitelist.sureDelete": "Are you sure you want to delete {0} entries?",
       "ipWhitelist.cannotDisable": "You are not allowed to disable the whitelist due to the administrators settings. Please contact the support for further information.",
 
-      "validation.fieldRequired": "This field is required"
+      "validation.fieldRequired": "This field is required",
+
+      "passwordChange.infoText": "Changing your password will invalidate all running API sessions and you will be forced to re-login.",
+      "passwordChange.oldPassword": "Old password",
+      "passwordChange.newPassword": "New password",
+      "passwordChange.action": "Change password",
+      "passwordChange.success": "Your password has been changed. Press 'Okay' to return to the login"
     }
   },
   {

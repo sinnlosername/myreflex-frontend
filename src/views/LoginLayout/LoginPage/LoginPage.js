@@ -5,6 +5,7 @@ import cls from './LoginPage.module.less'
 import {callApi} from "../../../shared/api.js";
 import {useHistory} from "react-router-dom";
 import {useTranslation} from "../../../shared/i18n";
+import {FormError} from "../../../shared/FormError";
 
 export const LoginPage = () => {
   const {t} = useTranslation();
@@ -52,14 +53,14 @@ const LoginForm = () => {
         <Form.Item
           className={cls.formItem}
           name="username"
-          rules={[{required: true, message: t("validation.fieldRequired")}]}>
+          rules={[{required: true, whitespace: true, message: t("validation.fieldRequired")}]}>
           <Input placeholder={t("spigotUsername")} size="large" autoComplete="username"/>
         </Form.Item>
 
         <Form.Item
           className={cls.formItem}
           name="password"
-          rules={[{required: true, message: t("validation.fieldRequired")}]}
+          rules={[{required: true, whitespace: true, message: t("validation.fieldRequired")}]}
           extra={t("login.notSpigotPass")}>
           <Input type="password" placeholder={t("apiPassword")} size="large" autoComplete="current-password"/>
         </Form.Item>
@@ -76,10 +77,3 @@ const LoginForm = () => {
   );
 }
 
-const FormError = ({message}) => (
-  <div className={cls.formErrorWrapper}>
-    {(message != null) && (
-      <Typography.Text type="danger">{message}</Typography.Text>
-    )}
-  </div>
-);

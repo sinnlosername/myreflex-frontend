@@ -32,6 +32,7 @@ async function doRestCall(method, endpoint, requestData) {
   }
 }
 
+//TODO translate
 function extractError({status, errorCode}) {
   if (status !== "error") return;
 
@@ -40,6 +41,10 @@ function extractError({status, errorCode}) {
       return "Invalid session";
     case "CREDENTIALS_INVALID":
       return "Invalid username or password, you fool";
+    case "OLD_PASSWRD_IS_THE_SAME_AS_NEW":
+      return "The passwords are identical."
+    case "OLD_PASSWORD_IS_INCORRECT":
+      return "The old password is incorrect."
     default:
       return "An unknown error occurred";
   }

@@ -13,6 +13,7 @@ import {faKey, faListAlt, faListUl, faThList, faUser} from "@fortawesome/free-so
 import {useTranslation} from "../../shared/i18n";
 import {WhitelistSwitch} from "./WhitelistSwitch/WhitelistSwitch";
 import ApiDataLoader from "../../shared/ApiDataLoader";
+import {PasswordPage} from "./PasswordPage/PasswordPage";
 
 export const DashboardLayout = () => {
   return (
@@ -32,7 +33,7 @@ export const DashboardLayout = () => {
               <Route path="/a/home" component={WhitelistPage} />
               <Route path="/a/startup-history" component={StartupHistoryPage} />
               <Route path="/a/login-history" component={LoginHistoryPage} />
-              <Route path="/a/password" render={() => (<p>home4</p>)} />
+              <Route path="/a/password" component={PasswordPage} />
 
               <Redirect to="/a/home" />
             </Switch>
