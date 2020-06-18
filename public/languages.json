@@ -119,7 +119,13 @@
       "passwordChange.oldPassword": "Altes Passwort",
       "passwordChange.newPassword": "Neues Passwort",
       "passwordChange.action": "Passwort ändern",
-      "passwordChange.success": "Dein Passwort wurde geändert. Drücke 'Okay', um zur Anmeldung zurückzukehren."
+      "passwordChange.success": "Dein Passwort wurde geändert. Drücke 'Okay', um zur Anmeldung zurückzukehren.",
+
+      "errors.sessionInvalid": "Ungültige Sitzung",
+      "errors.credentialsInvalid": "Ungültiger Nutzername oder ungültiges Passwort",
+      "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch.",
+      "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt.",
+      "errors.default": "Ein unbekannter Fehler ist aufgetreten"
     }
   }
 ]
