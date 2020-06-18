@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "customize-cra": "^1.0.0",
+    "gzipper": "^3.7.0",
     "less": "^3.11.3",
     "less-loader": "^6.1.1",
     "react-app-rewired": "^2.1.6"
@@ -26,6 +27,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "post-build": "gzipper --gzip-level 9 --exclude map build/",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
