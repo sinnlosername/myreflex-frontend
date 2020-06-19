@@ -40,7 +40,7 @@ function extractError({status, errorCode}, getTranslation) {
       return getTranslation("errors.sessionInvalid");
     case "CREDENTIALS_INVALID":
       return getTranslation("errors.credentialsInvalid");
-    case "OLD_PASSWRD_IS_THE_SAME_AS_NEW":
+    case "OLD_PASSWORD_IS_THE_SAME_AS_NEW":
       return getTranslation("errors.oldPasswordIsEqualToNew");
     case "OLD_PASSWORD_IS_INCORRECT":
       return getTranslation("errors.oldPasswordIsIncorrect");
