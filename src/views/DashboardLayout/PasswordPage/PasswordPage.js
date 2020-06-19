@@ -3,10 +3,9 @@ import {callApi} from "../../../shared/api";
 import {Button, Form, Input, Typography, Modal, Spin} from "antd";
 import {FormError} from "../../../shared/FormError";
 import {Trans, useTranslation} from "../../../shared/i18n";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faEye, faEyeSlash} from "@fortawesome/free-solid-svg-icons";
 import cls from './PasswordPage.module.less';
 import {useHistory} from "react-router-dom";
+import {showPasswordIconRender} from "../../../shared/misc";
 
 export const PasswordPage = () => {
   const [spinning, setSpinning] = useState(false);
@@ -27,10 +26,6 @@ export const PasswordPage = () => {
     })
   }
 
-  function iconRender(visible) {
-    return (!visible ? <FontAwesomeIcon icon={faEye} /> : <FontAwesomeIcon icon={faEyeSlash} />);
-  }
-
   return (
     <Spin spinning={spinning}>
       <Form name="passwordChange"
@@ -47,7 +42,7 @@ export const PasswordPage = () => {
           name="oldPassword"
           rules={[{required: true, whitespace: true, message: t("validation.fieldRequired")}]}>
           <Input.Password type="password" placeholder={t("passwordChange.oldPassword")} size="large"
-                          autoComplete="current-password" iconRender={iconRender}/>
+                          autoComplete="current-password" iconRender={showPasswordIconRender}/>
         </Form.Item>
 
         <Form.Item
@@ -55,7 +50,7 @@ export const PasswordPage = () => {
           name="newPassword"
           rules={[{required: true, whitespace: true, message: t("validation.fieldRequired")}]}>
           <Input.Password type="password" placeholder={t("passwordChange.newPassword")} size="large"
-                          autoComplete="new-password" iconRender={iconRender}/>
+                          autoComplete="new-password" iconRender={showPasswordIconRender}/>
         </Form.Item>
 
         <FormError message={error} />

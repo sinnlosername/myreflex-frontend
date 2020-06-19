@@ -6,6 +6,7 @@ import {callApi} from "../../../shared/api.js";
 import {useHistory} from "react-router-dom";
 import {useTranslation} from "../../../shared/i18n";
 import {FormError} from "../../../shared/FormError";
+import {showPasswordIconRender} from "../../../shared/misc";
 
 export const LoginPage = () => {
   const {t} = useTranslation();
@@ -62,7 +63,8 @@ const LoginForm = () => {
           name="password"
           rules={[{required: true, whitespace: true, message: t("validation.fieldRequired")}]}
           extra={t("login.notSpigotPass")}>
-          <Input type="password" placeholder={t("apiPassword")} size="large" autoComplete="current-password"/>
+          <Input.Password type="password" placeholder={t("apiPassword")} size="large"
+                          autoComplete="current-password" iconRender={showPasswordIconRender} />
         </Form.Item>
 
         <FormError message={error} />
