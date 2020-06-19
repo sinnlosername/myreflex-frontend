@@ -1,26 +1,16 @@
 import {useTranslation} from "../../../shared/i18n";
-import React, {useEffect, useState} from "react";
+import React, {useContext, useState} from "react";
 import {callApi} from "../../../shared/api";
 import {Modal, Switch as AntSwitch} from "antd";
 import cls from "./WhitelistSwitch.module.less";
+import {WhitelistStatusContext} from "../../../shared/context";
 
 export const WhitelistSwitch = () => {
   const {t} = useTranslation();
-  const [checked, setChecked] = useState(false);
-  const [loading, setLoading] = useState(true);
+  const {data: {information}, reloadData} = useContext(WhitelistStatusContext);
+  const [checked, setChecked] = useState(information === "enabled");
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  useEffect(() => {
-    callApi("GET", "/whitelist", undefined, setLoading).then(result => {
-      if (result.error != null) {
-        setError(result.error);
-        return;
-      }
-
-      setChecked(result.data["information"] === "enabled");
-      setLoading(false);
-    })
-  }, []);
 
   function handleChangeResult(result) {
     if (result.errorCode === "NOT_ALLOWED_TO_DISABLE_WHITELIST") {
@@ -45,7 +35,9 @@ export const WhitelistSwitch = () => {
                    .then(checkedValue => {
                      setLoading(false);
                      setChecked(checkedValue ?? newChecked);
+                     reloadData();
                    });
-               }}/>
+               }}
+    />
   );
 }

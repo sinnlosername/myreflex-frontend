@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react";
-import {Button, Typography, Table, Form, Input, Modal} from "antd";
+import {Alert, Button, Typography, Table, Form, Input, Modal} from "antd";
 import {callApi} from "../../../shared/api";
-import {WhitelistContext} from "../../../shared/context";
+import {WhitelistContext, WhitelistStatusContext} from "../../../shared/context";
 import ipRegex from "ip-regex";
 import cls from './WhitelistPage.module.less';
 import {IpInfoLoader} from "../IpInfo/IpInfo";
@@ -12,11 +12,22 @@ const {Title, Text} = Typography;
 
 export const WhitelistPage = () => {
   const {t} = useTranslation();
+  const {data: {information}} = useContext(WhitelistStatusContext);
+
   return (
     <div>
       <Title level={2}>{t("dashboard.ipWhitelist")}</Title>
       <Trans name="ipWhitelist.infoText" component={Text}/>
-      <br/><br/>
+      <br/>
+
+      {information === "disabled" && (
+        <>
+          <br />
+          <Alert message="Warning" description="The whitelist is currently disabled" type="warning" banner showIcon />
+        </>
+      )}
+
+      <br/>
 
       <ApiDataLoader endpoint="/whitelist/ips" context={WhitelistContext}>
         <WhitelistTable/>
@@ -42,7 +53,6 @@ const WhitelistAdd = ({form}) => {
     </Form>
   );
 }
-
 
 const WhitelistTable = () => {
   const {t, attach} = useTranslation();
@@ -108,4 +118,3 @@ const WhitelistTable = () => {
     </>
   )
 }
-
