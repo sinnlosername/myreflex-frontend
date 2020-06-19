@@ -7,16 +7,16 @@
       "helloWorld": "Hello world!",
       "reflexDevTeam": "Reflex Developement Team (reflex.rip)",
       "reflex": "Reflex",
-      "signIn": "Sign In",
-      "spigotUsername": "Spigot username",
+      "signIn": "Log In",
+      "spigotUsername": "Spigot Username",
       "apiPassword": "API Password",
       "ipAddress": "IP address",
       "add": "Add",
       "cancel": "Cancel",
       "delete": "Delete",
       "logout": "Logout",
-      "okay": "Okay",
-      "timestamp": "Timestamp",
+      "okay": "OK",
+      "timestamp": "Date/Time",
       "browser": "Browser",
       "operatingSystem": "Operating System",
       "fullDateFormat": "DD.MM.YYYY [at] HH:mm:ss",
@@ -26,36 +26,42 @@
       "zip": "ZIP",
       "isp": "ISP",
       "as": "AS",
-      "org": "Organisation",
+      "org": "Organization",
       "enabled": "Enabled",
       "disabled": "Disabled",
 
-      "ipInfo.unavailable": "There is no information available about this ip address.",
+      "ipInfo.unavailable": "There is no information available about this IP address.",
 
       "dashboard.ipWhitelist": "IP Whitelist",
-      "dashboard.reflexStartupHistory": "Reflex startup history",
-      "dashboard.apiLoginHistory": "API login history",
-      "dashboard.changeApiPassword": "Change API password",
+      "dashboard.reflexStartupHistory": "Reflex Startup History",
+      "dashboard.apiLoginHistory": "API Login History",
+      "dashboard.changeApiPassword": "Change API Password",
 
       "dashboard.loggedInAs": "Logged in as {0} ({1})",
 
       "login.helloText": "Welcome! In this panel you can manage your Reflex account details, access, and more. If you have any questions please contact us in Discord.",
-      "login.notSpigotPass": "Don't use your spigot password for this!",
-      "login.doLogin": "LETS GO",
+      "login.notSpigotPass": "Do not enter your Spigot password here!",
+      "login.doLogin": "LET'S GO",
 
-      "ipWhitelist.infoText": "In this panel you can manage which IP addresses can be used to run your Reflex copy. This way you can prevent your copy from being compromised. Make sure IPs of all your servers where you can use Reflex are here.",
-      "ipWhitelist.mustBeIp": "The value must be a valid IP address",
-      "ipWhitelist.addIpAddress": "Add new IP address",
+      "ipWhitelist.infoText": "In this panel you can manage which IP addresses can be used to start your Reflex copy. This way you can prevent your copy from being compromised. Make sure IP addresses of all your servers where you use Reflex are listed here.",
+      "ipWhitelist.mustBeIp": "Please enter a valid IP address",
+      "ipWhitelist.addIpAddress": "Add a new IP address",
       "ipWhitelist.sureDelete": "Are you sure you want to delete {0} entries?",
-      "ipWhitelist.cannotDisable": "You are not allowed to disable the whitelist due to the administrators settings. Please contact the support for further information.",
+      "ipWhitelist.cannotDisable": "You are not allowed to disable IP whitelist for security reasons. Please contact us for further information.",
 
       "validation.fieldRequired": "This field is required",
 
-      "passwordChange.infoText": "Changing your password will invalidate all running API sessions and you will be forced to re-login.",
-      "passwordChange.oldPassword": "Old password",
+      "passwordChange.infoText": "Changing your password will invalidate all of the active API sessions, and you will be forced to re-login.",
+      "passwordChange.oldPassword": "Current password",
       "passwordChange.newPassword": "New password",
-      "passwordChange.action": "Change password",
-      "passwordChange.success": "Your password has been changed. Press 'Okay' to return to the login"
+      "passwordChange.action": "Update Password",
+      "passwordChange.success": "Your password has been changed. Press 'OK' to proceed.",
+
+      "errors.sessionInvalid": "Invalid session",
+      "errors.credentialsInvalid": "Invalid username or password",
+      "errors.oldPasswordIsEqualToNew": "The passwords are identical.",
+      "errors.oldPasswordIsIncorrect": "The current password you entered is incorrect.",
+      "errors.default": "An unknown error occurred"
     }
   },
   {
@@ -113,7 +119,77 @@
       "passwordChange.oldPassword": "Altes Passwort",
       "passwordChange.newPassword": "Neues Passwort",
       "passwordChange.action": "Passwort ändern",
-      "passwordChange.success": "Dein Passwort wurde geändert. Drücke 'Okay', um zur Anmeldung zurückzukehren."
+      "passwordChange.success": "Dein Passwort wurde geändert. Drücke 'Okay', um zur Anmeldung zurückzukehren.",
+
+      "errors.sessionInvalid": "Ungültige Sitzung",
+      "errors.credentialsInvalid": "Ungültiger Nutzername oder ungültiges Passwort",
+      "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch.",
+      "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt.",
+      "errors.default": "Ein unbekannter Fehler ist aufgetreten"
+    }
+  },
+  {
+    "name": "Русский",
+    "iso3": "rus",
+    "keys": {
+      "helloWorld": "Привет, мир!",
+      "reflexDevTeam": "Команда разработки Reflex (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "Войти",
+      "spigotUsername": "Ник на Spigot",
+      "apiPassword": "Пароль API",
+      "ipAddress": "IP-адрес",
+      "add": "Добавить",
+      "cancel": "Отмена",
+      "delete": "Удалить",
+      "logout": "Выйти",
+      "okay": "ОК",
+      "timestamp": "Дата/время",
+      "browser": "Браузер",
+      "operatingSystem": "Операционная система",
+      "fullDateFormat": "DD.MM.YYYY [в] HH:mm:ss",
+      "country": "Страна",
+      "regionName": "Регион",
+      "city": "Город",
+      "zip": "Почтовый индекс",
+      "isp": "Провайдер",
+      "as": "Автономная система",
+      "org": "Организация",
+      "enabled": "Вкл.",
+      "disabled": "Выкл.",
+
+      "ipInfo.unavailable": "Не удалось получить информацию об этом IP-адресе.",
+
+      "dashboard.ipWhitelist": "Вайтлист IP",
+      "dashboard.reflexStartupHistory": "История запусков Reflex",
+      "dashboard.apiLoginHistory": "История входов в API",
+      "dashboard.changeApiPassword": "Изменить пароль API",
+
+      "dashboard.loggedInAs": "Вы вошли как {0} ({1})",
+
+      "login.helloText": "Добро пожаловать! В этой панели вы можете управлять настройками вашей учётной записи Reflex, доступом к ней и пр. Если у вас есть какие-либо вопросы, пожалуйста, свяжитесь с нами в Discord.",
+      "login.notSpigotPass": "Не вводите пароль от вашей учётной записи Spigot!",
+      "login.doLogin": "ПОЕХАЛИ",
+
+      "ipWhitelist.infoText": "Здесь вы можете управлять IP-адресами, с которых можно запустить вашу копию Reflex. Это позволяет защитить вашу копию от попадания в нехорошие руки. Удостоверьтесь в том, что все IP-адреса ваших серверов, на которых вы используете Reflex, находятся в этом списке.",
+      "ipWhitelist.mustBeIp": "Вы ввели некорректный IP-адрес",
+      "ipWhitelist.addIpAddress": "Добавить новый IP-адрес",
+      "ipWhitelist.sureDelete": "Вы уверены, что хотите удалить {0} записей?",
+      "ipWhitelist.cannotDisable": "Вы не можете отключить вайтлист IP из соображений безопасности. Пожалуйста, свяжитесь с нами, если у вас есть вопросы.",
+
+      "validation.fieldRequired": "Это поле является обязательным",
+
+      "passwordChange.infoText": "Смена пароля аннулирует все активные сессии API, и вам нужно будет перезайти.",
+      "passwordChange.oldPassword": "Текущий пароль",
+      "passwordChange.newPassword": "Новый пароль",
+      "passwordChange.action": "Обновить пароль",
+      "passwordChange.success": "Ваш пароль был обновлён. Нажмите 'ОК', чтобы продолжить",
+
+      "errors.sessionInvalid": "Недействительная сессия",
+      "errors.credentialsInvalid": "Неверное имя пользователя или пароль",
+      "errors.oldPasswordIsEqualToNew": "Пароли совпадают.",
+      "errors.oldPasswordIsIncorrect": "Неверно введён текущий пароль.",
+      "errors.default": "Произошла неизвестная ошибка"
     }
   }
 ]

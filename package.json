@@ -5,6 +5,12 @@
   "license": "MIT",
   "homepage": "https://my.reflex.rip",
   "author": "Florian (https://github.com/sinnlosername)",
+  "contributors": [
+    {
+      "name": "Steven",
+      "url": "https://github.com/StevenKGER"
+    }
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/sinnlosername/myreflex-frontend.git"
