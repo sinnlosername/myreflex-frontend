@@ -4,28 +4,12 @@ import {TranslationContext} from "./context";
 
 export function useTranslation() {
   const contextValue = useContext(TranslationContext);
-  const {translationInfo, updateTranslations} = contextValue
 
-  if (translationInfo == null) {
+  if (contextValue == null) {
     throw new Error("Translation context unavailable");
   }
 
-  return {
-    translationInfo,
-    updateTranslations,
-    t: (key, ...args) => {
-      return translationInfo.getTranslation(key).replace(/{(\d+)}/g, (match, number) => {
-        return typeof args[number] != 'undefined' ? args[number] : match;
-      });
-    },
-    attach: (component) => {
-      return (
-        <TranslationContext.Provider value={contextValue}>
-          {component}
-        </TranslationContext.Provider>
-      )
-    }
-  }
+  return contextValue;
 }
 
 export const Trans = ({component: Component, name}) => {
@@ -40,6 +24,8 @@ export class TranslationLoader extends React.Component {
     this.state = {
       translationInfo: null,
     };
+
+    this.getContextValue.bind(this);
   }
 
   componentDidMount() {
@@ -52,12 +38,31 @@ export class TranslationLoader extends React.Component {
       });
   }
 
+  getContextValue() {
+    const contextValue = {
+      translationInfo: this.state.translationInfo,
+      updateTranslations: this.forceUpdate.bind(this),
+      t: (key, ...args) => {
+        return this.state.translationInfo.getTranslation(key).replace(/{(\d+)}/g, (match, number) => {
+          return typeof args[number] != 'undefined' ? args[number] : match;
+        });
+      }
+    };
+
+    contextValue.attach = (component) => {
+      return (
+        <TranslationContext.Provider value={contextValue}>
+          {component}
+        </TranslationContext.Provider>
+      )
+    };
+
+    return contextValue;
+  }
+
   render() {
     return this.state.translationInfo ? (
-      <TranslationContext.Provider value={{
-        translationInfo: this.state.translationInfo,
-        updateTranslations: this.forceUpdate.bind(this)
-      }}>
+      <TranslationContext.Provider value={this.getContextValue()}>
         {this.props.children}
       </TranslationContext.Provider>
     ) : (
