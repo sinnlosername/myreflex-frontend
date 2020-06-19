@@ -8,10 +8,10 @@ export default class ApiDataLoader extends React.Component {
     super(props);
 
     if (props.endpoint == null)
-      throw new Error("Property endpoint is missing");
+      throw new Error("endpoint must be set");
 
-    if (props.context == null)
-      throw new Error("Property context is missing");
+    if (props.context == null && props.inline == null)
+      throw new Error("Either inline or context must be set");
 
     this.state = {data: null, error: null};
     this.componentDidMount.bind(this);
@@ -42,18 +42,32 @@ export default class ApiDataLoader extends React.Component {
     this.unmounted = true;
   }
 
-  render() {
+  getContextChild() {
     const ContextProvider = this.props.context.Provider;
+
+    return (<ContextProvider value={{
+      reloadData: this.reloadData.bind(this),
+      data: this.state.data
+    }}>
+      {this.props.children}
+    </ContextProvider>);
+  }
+
+  getInlineChild() {
+    return (<>
+      {this.props.children({
+        reloadData: this.reloadData.bind(this),
+        data: this.state.data
+      })}
+    </>);
+  }
+
+  render() {
     return (
       <>
-        {this.state.data != null ? (
-          <ContextProvider value={{
-            reloadData: this.reloadData.bind(this),
-            data: this.state.data
-          }}>
-            {this.props.children}
-          </ContextProvider>
-        ) : (this.state.error != null ? this.state.error : (<Spin style={{width: "100%"}}/>))}
+        {this.state.data != null
+          ? (this.props.inline ? this.getInlineChild() : this.getContextChild())
+          : (this.state.error != null ? this.state.error : (<Spin style={{width: "100%"}}/>))}
       </>
     );
   }
