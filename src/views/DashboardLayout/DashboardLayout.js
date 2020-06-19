@@ -1,6 +1,6 @@
 import React, {useContext, useState} from "react";
 import classes from './DashboardLayout.module.less';
-import {Spin, Layout, Row, Col, Typography, Dropdown, Menu} from "antd";
+import {Spin, Layout, Row, Col, Typography, Dropdown, Menu, Button, Divider} from "antd";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {Footer} from "../Footer/Footer";
 import {callApi} from "../../shared/api";
@@ -97,9 +97,13 @@ const HeaderRow = () => {
                          target="_blank">{t("reflex")}</Typography.Link>
       </Col>
       <Col span={6} className={classes.headerMenuCol}>
-        <Dropdown.Button overlay={<HeaderMenu/>} placement="bottomCenter" icon={<FontAwesomeIcon icon={faUser}/>}>
-          {t("dashboard.loggedInAs", user.username, user["userID"])}
-        </Dropdown.Button>
+        <Dropdown overlay={<HeaderMenu/>} placement="bottomCenter">
+          <Button>
+            {t("dashboard.loggedInAs", user.username, user["userID"])}
+            <Divider type="vertical" />
+            <FontAwesomeIcon icon={faUser}/>
+          </Button>
+        </Dropdown>
       </Col>
     </Row>
   );
