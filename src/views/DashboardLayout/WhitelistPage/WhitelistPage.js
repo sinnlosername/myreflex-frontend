@@ -114,6 +114,7 @@ const WhitelistTable = () => {
              expandable={{
                expandedRowRender: record => (<IpInfoLoader endpoint={`/whitelist/ips/${record.ip}`} />)
              }}
+             locale={{ emptyText: t("noData") }}
       />
     </>
   )

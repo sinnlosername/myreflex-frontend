@@ -43,6 +43,7 @@ export const StartupHistoryTable = () => {
       expandable={{
         expandedRowRender: record => (<IpInfoLoader endpoint={`/history/reflex/${record.ipAddress}`} />)
       }}
+      locale={{ emptyText: t("noData") }}
     >
     </Table>
   );

@@ -49,6 +49,7 @@ export const LoginHistoryTable = () => {
         pageSize: 10,
         showSizeChanger: false
       }}
+      locale={{ emptyText: t("noData") }}
     >
     </Table>
   );

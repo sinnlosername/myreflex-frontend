@@ -30,6 +30,7 @@
       "org": "Organization",
       "enabled": "Enabled",
       "disabled": "Disabled",
+      "noData": "No data available",
 
       "ipInfo.unavailable": "There is no information available about this IP address.",
 
