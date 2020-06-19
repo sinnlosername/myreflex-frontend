@@ -2,8 +2,11 @@ import React from "react";
 import {Redirect} from "react-router-dom";
 import {Spin} from "antd";
 import {callApi} from "./api";
+import {TranslationContext} from "./context";
 
 export default class ApiDataLoader extends React.Component {
+  static contextType = TranslationContext;
+
   constructor(props) {
     super(props);
 
@@ -22,7 +25,7 @@ export default class ApiDataLoader extends React.Component {
   }
 
   reloadData() {
-    callApi("GET", this.props.endpoint, undefined)
+    callApi("GET", this.props.endpoint, undefined, undefined, this.context.t)
       .then(({data, error, errorCode}) => {
         if (this.unmounted) return;
         if (error == null) {

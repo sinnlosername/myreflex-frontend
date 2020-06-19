@@ -45,7 +45,7 @@ const LoginForm = () => {
             onFinish={formData => callApi("POST", "/auth", {
               ...formData,
               cookie: true
-            }, setSpinning).then(onResponse)}
+            }, setSpinning, t).then(onResponse)}
             className={cls.form}>
         <Typography.Title level={2} className={cls.formTitle}>
           {t("signIn")}

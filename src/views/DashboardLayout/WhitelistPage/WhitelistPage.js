@@ -74,7 +74,7 @@ const WhitelistTable = () => {
       cancelText: t("cancel"),
       cancelButtonProps: {size: "large"},
       onOk: () => addForm.validateFields()
-        .then(fields => callApi("POST", "/whitelist/ips/" + fields.ip, {}))
+        .then(fields => callApi("POST", "/whitelist/ips/" + fields.ip, {}, undefined, t))
         .then(() => reloadData())
     });
   }
@@ -87,7 +87,7 @@ const WhitelistTable = () => {
       cancelText: t("cancel"),
       onOk: () => callApi("PATCH", "/whitelist/ips", {
         remove: selectedRowKeys.map(key => data.entries[key])
-      }).then(() => reloadData())
+      }, undefined, t).then(() => reloadData())
     });
   }
 

@@ -30,7 +30,7 @@ export const WhitelistSwitch = () => {
     <AntSwitch className={cls.whitelistSwitch} checked={checked} loading={loading}
                checkedChildren={t("enabled")} unCheckedChildren={t("disabled")} size={"small"}
                onChange={newChecked => {
-                 callApi(newChecked ? "POST" : "DELETE", "/whitelist", {}, setLoading)
+                 callApi(newChecked ? "POST" : "DELETE", "/whitelist", {}, setLoading, t)
                    .then(handleChangeResult)
                    .then(checkedValue => {
                      setLoading(false);

@@ -1,22 +1,22 @@
 const API_URL = "https://my.reflex.rip/api/v1";
 
-export async function callApi(method, endpoint, requestData, setSpinning) {
-  if (setSpinning != null) {
-    setSpinning(true);
+export async function callApi(method, endpoint, requestData, setSpinning = () => {}, getTranslation) {
+  if (getTranslation == null) {
+    throw new Error("Translation function missing");
   }
 
-  const result = await doRestCall(method, endpoint, requestData);
+  setSpinning(true);
+
+  const result = await doRestCall(method, endpoint, requestData, getTranslation);
 
   if (result.error != null) {
-    if (setSpinning != null) {
-      setSpinning(false);
-    }
+    setSpinning(false);
   }
 
   return result;
 }
 
-async function doRestCall(method, endpoint, requestData) {
+async function doRestCall(method, endpoint, requestData, getTranslation) {
   try {
     const isLocalTest = process.env.NODE_ENV === "development";
     const data = await fetch(API_URL + endpoint, {
@@ -25,27 +25,26 @@ async function doRestCall(method, endpoint, requestData) {
       credentials: (isLocalTest ? 'include' : undefined)
     }).then(response => response.json());
 
-    return {data, errorCode: data.errorCode, error: extractError(data)};
+    return {data, errorCode: data.errorCode, error: extractError(data, getTranslation)};
   } catch (e) {
     console.error(e);
     return {error: "Internal error - " + e.message}
   }
 }
 
-//TODO translate
-function extractError({status, errorCode}) {
+function extractError({status, errorCode}, getTranslation) {
   if (status !== "error") return;
 
   switch (errorCode) {
     case "SESSION_INVALID":
-      return "Invalid session";
+      return getTranslation("errors.sessionInvalid");
     case "CREDENTIALS_INVALID":
-      return "Invalid username or password, you fool";
+      return getTranslation("errors.credentialsInvalid");
     case "OLD_PASSWRD_IS_THE_SAME_AS_NEW":
-      return "The passwords are identical."
+      return getTranslation("errors.oldPasswordIsEqualToNew");
     case "OLD_PASSWORD_IS_INCORRECT":
-      return "The old password is incorrect."
+      return getTranslation("errors.oldPasswordIsIncorrect");
     default:
-      return "An unknown error occurred";
+      return getTranslation("errors.default");
   }
 }
