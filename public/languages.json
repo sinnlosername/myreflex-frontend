@@ -2,7 +2,8 @@
   {
     "name": "English",
     "iso3": "eng",
-    "default": true,
+    "browserLanguageRegex": "en-?.*",
+    "fallback": true,
     "keys": {
       "helloWorld": "Hello world!",
       "reflexDevTeam": "Reflex Developement Team (reflex.rip)",
@@ -67,6 +68,7 @@
   {
     "name": "Deutsch",
     "iso3": "ger",
+    "browserLanguageRegex": "de-?.*",
     "keys": {
       "helloWorld": "Hallo Kartoffel!",
       "reflexDevTeam": "Reflex Entwicklungsteam (reflex.rip)",
@@ -131,6 +133,7 @@
   {
     "name": "Русский",
     "iso3": "rus",
+    "browserLanguageRegex": "ru(-ru)?",
     "keys": {
       "helloWorld": "Привет, мир!",
       "reflexDevTeam": "Команда разработки Reflex (reflex.rip)",

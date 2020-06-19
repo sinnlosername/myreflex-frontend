@@ -80,7 +80,7 @@ class TranslationInfo {
     const currentText = this.currentLanguage.keys[key];
     if (currentText != null) return currentText;
 
-    const defaultText = this.defaultLanguage.keys[key];
+    const defaultText = this.fallbackLanguage.keys[key];
     if (defaultText != null) return defaultText;
 
     return "[translation missing - you lazy fool]"
@@ -90,12 +90,18 @@ class TranslationInfo {
     return iso3 == null ? null : this.languages.find(lang => lang["iso3"] === iso3);
   }
 
-  get defaultLanguage() {
-    return this.languages.find(lang => lang.default === true);
+  get fallbackLanguage() {
+    return this.languages.find(lang => lang.fallback === true);
+  }
+
+  get browserLanguage() {
+    return this.languages.find(lang => window.navigator.language.match(lang["browserLanguageRegex"]));
   }
 
   get currentLanguage() {
-    return this.getLanguage(window.localStorage.getItem("language")) ?? this.defaultLanguage;
+    return this.getLanguage(window.localStorage.getItem("language"))
+      ?? this.browserLanguage
+      ?? this.fallbackLanguage;
   }
 
   set currentLanguage(value) {
