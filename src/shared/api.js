@@ -44,6 +44,8 @@ function extractError({status, errorCode}, getTranslation) {
       return getTranslation("errors.oldPasswordIsEqualToNew");
     case "OLD_PASSWORD_IS_INCORRECT":
       return getTranslation("errors.oldPasswordIsIncorrect");
+    case "NEW_PASSWORD_IS_WEAK":
+      return getTranslation("errors.newPasswordIsWeak")
     default:
       return getTranslation("errors.default");
   }
