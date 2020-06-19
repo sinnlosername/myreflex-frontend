@@ -40,7 +40,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "post-build": "gzipper --gzip-level 9 --exclude map build/",
+    "post-build": "gzipper --gzip-level 9 --exclude map,png,ico build/",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject"
   },
