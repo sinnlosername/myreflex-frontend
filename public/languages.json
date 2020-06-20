@@ -99,8 +99,8 @@
       "org": "Organisation",
       "enabled": "AN",
       "disabled": "AUS",
-	  "noData": "No data",
-	  "warning": "Warning",
+	  "noData": "Keine Daten",
+	  "warning": "Warnung",
 
       "ipInfo.unavailable": "Zu dieser IP-Adresse sind keine Informationen verfügbar.",
 
@@ -120,7 +120,7 @@
       "ipWhitelist.addIpAddress": "Neue IP-Adresse hinzufügen",
       "ipWhitelist.sureDelete": "Bist Du dir sicher, dass Du {0} Einträge löschen möchtest?",
       "ipWhitelist.cannotDisable": "Aufgrund einer Administrationsrichtlinie kannst Du die Whitelist nicht deaktivieren. Kontaktiere den Support für weitere Informationen.",
-	  "ipWhitelist.disabledWarning": "You have not enabled IP whitelist. Changes made on this page will take no effect until you enable the whitelist in the panel on the left.",
+	  "ipWhitelist.disabledWarning": "Du hast die Whitelist nicht aktiviert. Änderungen werden erst in Effekt treten, wenn Du die Whitelist im Seitenmenü aktivierst.",
 
       "validation.fieldRequired": "Dieses Feld wird benötigt",
 
@@ -132,9 +132,9 @@
 
       "errors.sessionInvalid": "Ungültige Sitzung",
       "errors.credentialsInvalid": "Ungültiger Nutzername oder ungültiges Passwort",
-      "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch.",
-      "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt.",
-	  "errors.newPasswordIsWeak": "The new password is not strong enough: it is either too short, contains your username, or does not contain enough non-repetitive symbols.",
+      "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch",
+      "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt",
+	  "errors.newPasswordIsWeak": "Das neue Password ist zu schwach. Es ist entweder zu kurz, enthält den Nutzernamen oder enthält nicht genug sich nicht wiederholende Zeichen",
       "errors.default": "Ein unbekannter Fehler ist aufgetreten"
     }
   },
