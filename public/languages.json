@@ -31,6 +31,7 @@
       "enabled": "Enabled",
       "disabled": "Disabled",
       "noData": "No data available",
+      "warning": "Warning",
 
       "ipInfo.unavailable": "There is no information available about this IP address.",
 
@@ -50,6 +51,7 @@
       "ipWhitelist.addIpAddress": "Add a new IP address",
       "ipWhitelist.sureDelete": "Are you sure you want to delete {0} entries?",
       "ipWhitelist.cannotDisable": "You are not allowed to disable IP whitelist for security reasons. Please contact us for further information.",
+      "ipWhitelist.disabledWarning": "The whitelist is currently disabled",
 
       "validation.fieldRequired": "This field is required",
 

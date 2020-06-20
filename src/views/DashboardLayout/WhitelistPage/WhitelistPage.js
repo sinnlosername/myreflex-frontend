@@ -23,7 +23,7 @@ export const WhitelistPage = () => {
       {information === "disabled" && (
         <>
           <br />
-          <Alert message="Warning" description="The whitelist is currently disabled" type="warning" banner showIcon />
+          <Alert message={t("warning")} description={t("ipWhitelist.disabledWarning")} type="warning" banner showIcon />
         </>
       )}
 
