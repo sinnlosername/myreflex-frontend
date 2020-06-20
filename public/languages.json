@@ -99,6 +99,8 @@
       "org": "Organisation",
       "enabled": "Aktiviert",
       "disabled": "Deaktiviert",
+      "noData": "Keine Daten verfügbar",
+      "warning": "Warnung",
 
       "ipInfo.unavailable": "Zu dieser IP-Adresse sind keine Informationen verfügbar.",
 
@@ -118,6 +120,7 @@
       "ipWhitelist.addIpAddress": "Neue IP-Adresse hinzufügen",
       "ipWhitelist.sureDelete": "Bist Du dir sicher, dass Du {0} Einträge löschen möchtest?",
       "ipWhitelist.cannotDisable": "Aufgrund einer Administrationsrichtlinie kannst Du die Whitelist nicht deaktivieren. Kontaktiere den Support für weitere Informationen.",
+      "ipWhitelist.disabledWarning": "Die Whitelist ist zur Zeit deaktiviert",
 
       "validation.fieldRequired": "Dieses Feld wird benötigt",
 
@@ -126,6 +129,7 @@
       "passwordChange.newPassword": "Neues Passwort",
       "passwordChange.action": "Passwort ändern",
       "passwordChange.success": "Dein Passwort wurde geändert. Drücke 'Okay', um zur Anmeldung zurückzukehren.",
+      "errors.newPasswordIsWeak": "Das neue Password ist zu schwach",
 
       "errors.sessionInvalid": "Ungültige Sitzung",
       "errors.credentialsInvalid": "Ungültiger Nutzername oder ungültiges Passwort",
