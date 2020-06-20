@@ -42,7 +42,8 @@
     "build": "react-app-rewired build",
     "post-build": "gzipper --gzip-level 9 --exclude map,png,ico build/",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "translate": "node ./dev/translate.js"
   },
   "eslintConfig": {
     "extends": "react-app"
