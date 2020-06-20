@@ -28,9 +28,9 @@
       "isp": "ISP",
       "as": "AS",
       "org": "Organization",
-      "enabled": "Enabled",
-      "disabled": "Disabled",
-      "noData": "No data available",
+      "enabled": "ON",
+      "disabled": "OFF",
+      "noData": "No data",
       "warning": "Warning",
 
       "ipInfo.unavailable": "There is no information available about this IP address.",
@@ -51,7 +51,7 @@
       "ipWhitelist.addIpAddress": "Add a new IP address",
       "ipWhitelist.sureDelete": "Are you sure you want to delete {0} entries?",
       "ipWhitelist.cannotDisable": "You are not allowed to disable IP whitelist for security reasons. Please contact us for further information.",
-      "ipWhitelist.disabledWarning": "The whitelist is currently disabled",
+      "ipWhitelist.disabledWarning": "You have not enabled IP whitelist. Changes made on this page will take no effect until you enable the whitelist in the panel on the left.",
 
       "validation.fieldRequired": "This field is required",
 
@@ -65,7 +65,7 @@
       "errors.credentialsInvalid": "Invalid username or password",
       "errors.oldPasswordIsEqualToNew": "The passwords are identical.",
       "errors.oldPasswordIsIncorrect": "The current password you entered is incorrect.",
-      "errors.newPasswordIsWeak": "The new password is too weak",
+      "errors.newPasswordIsWeak": "The new password is not strong enough: it is either too short, contains your username, or does not contain enough non-repetitive symbols.",
       "errors.default": "An unknown error occurred"
     }
   },
@@ -97,10 +97,10 @@
       "isp": "ISP",
       "as": "AS",
       "org": "Organisation",
-      "enabled": "Aktiviert",
-      "disabled": "Deaktiviert",
-      "noData": "Keine Daten verfügbar",
-      "warning": "Warnung",
+      "enabled": "AN",
+      "disabled": "AUS",
+	  "noData": "No data",
+	  "warning": "Warning",
 
       "ipInfo.unavailable": "Zu dieser IP-Adresse sind keine Informationen verfügbar.",
 
@@ -120,7 +120,7 @@
       "ipWhitelist.addIpAddress": "Neue IP-Adresse hinzufügen",
       "ipWhitelist.sureDelete": "Bist Du dir sicher, dass Du {0} Einträge löschen möchtest?",
       "ipWhitelist.cannotDisable": "Aufgrund einer Administrationsrichtlinie kannst Du die Whitelist nicht deaktivieren. Kontaktiere den Support für weitere Informationen.",
-      "ipWhitelist.disabledWarning": "Die Whitelist ist zur Zeit deaktiviert",
+	  "ipWhitelist.disabledWarning": "You have not enabled IP whitelist. Changes made on this page will take no effect until you enable the whitelist in the panel on the left.",
 
       "validation.fieldRequired": "Dieses Feld wird benötigt",
 
@@ -129,12 +129,12 @@
       "passwordChange.newPassword": "Neues Passwort",
       "passwordChange.action": "Passwort ändern",
       "passwordChange.success": "Dein Passwort wurde geändert. Drücke 'Okay', um zur Anmeldung zurückzukehren.",
-      "errors.newPasswordIsWeak": "Das neue Password ist zu schwach",
 
       "errors.sessionInvalid": "Ungültige Sitzung",
       "errors.credentialsInvalid": "Ungültiger Nutzername oder ungültiges Passwort",
       "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch.",
       "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt.",
+	  "errors.newPasswordIsWeak": "The new password is not strong enough: it is either too short, contains your username, or does not contain enough non-repetitive symbols.",
       "errors.default": "Ein unbekannter Fehler ist aufgetreten"
     }
   },
@@ -166,8 +166,10 @@
       "isp": "Провайдер",
       "as": "Автономная система",
       "org": "Организация",
-      "enabled": "Вкл.",
-      "disabled": "Выкл.",
+      "enabled": "ВКЛ",
+      "disabled": "ВЫКЛ",
+	  "noData": "Нет данных",
+	  "warning": "Внимание",
 
       "ipInfo.unavailable": "Не удалось получить информацию об этом IP-адресе.",
 
@@ -187,6 +189,7 @@
       "ipWhitelist.addIpAddress": "Добавить новый IP-адрес",
       "ipWhitelist.sureDelete": "Вы уверены, что хотите удалить {0} записей?",
       "ipWhitelist.cannotDisable": "Вы не можете отключить вайтлист IP из соображений безопасности. Пожалуйста, свяжитесь с нами, если у вас есть вопросы.",
+	  "ipWhitelist.disabledWarning": "Вы не включили вайтлист IP. Изменения, сделанные на этой странице, не вступят в силу, пока вы не включите вайтлист в панели слева.",
 
       "validation.fieldRequired": "Это поле является обязательным",
 
@@ -200,6 +203,7 @@
       "errors.credentialsInvalid": "Неверное имя пользователя или пароль",
       "errors.oldPasswordIsEqualToNew": "Пароли совпадают.",
       "errors.oldPasswordIsIncorrect": "Неверно введён текущий пароль.",
+	  "errors.newPasswordIsWeak": "Новый пароль недостаточно надёжен: он либо слишком короткий, либо содержит ваше имя, либо содержит недостаточно неповторяющихся символов.",
       "errors.default": "Произошла неизвестная ошибка"
     }
   }
