@@ -365,7 +365,7 @@
       "timestamp": "日期/时间",
       "browser": "浏览器",
       "operatingSystem": "操作系统",
-      "fullDateFormat": "YYYY年MM月DD日 HH:mm:ss",
+      "fullDateFormat": "YYYY[年]MM[月]DD[日] HH:mm:ss",
       "country": "国家",
       "regionName": "地区",
       "city": "城市",
