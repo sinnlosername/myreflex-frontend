@@ -275,5 +275,74 @@
       "errors.newPasswordIsWeak": "Uusi salasanasi ei ole tarpeeksi turvallinen: se on joko liian lyhyt, sisältää käyttäjänimesi, tai ei sisällä tarpeeksi toistuvia kirjaimia.",
       "errors.default": "Tuntematon virhe tapahtui"
     }
+  },
+  {
+    "name": "Française",
+    "iso3": "fre",
+    "browserLanguageRegex": "f-?.*",
+    "keys": {
+      "helloWorld": "Hello World !",
+      "reflexDevTeam": "Equipe de developpement Reflex (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "Se connecter",
+      "spigotUsername": "Nom d'utilisateur Spigot",
+      "apiPassword": "Mot de passe API",
+      "ipAddress": "Adresse IP ",
+      "add": "Ajouter",
+      "cancel": "Annuler",
+      "delete": "Supprimer",
+      "logout": "Se deconnecter",
+      "okay": "OK",
+      "timestamp": "Jour/Heure",
+      "browser": "Navigateur",
+      "operatingSystem": "Systeme d'exploitation",
+      "fullDateFormat": "DD.MM.YYYY [a] HH:mm:ss",
+      "country": "Pays",
+      "regionName": "Region",
+      "city": "Ville",
+      "zip": "Code postal",
+      "isp": "FAI",
+      "as": "EN",
+      "org": "Organisation",
+      "enabled": "ON",
+      "disabled": "OFF",
+      "noData": "Pas de donnees",
+      "warning": "Attention",
+
+      "ipInfo.unavailable": "Il n'y a pas d'informations sur cette adresse IP",
+
+      "dashboard.ipWhitelist": "Liste d'IP autorisees",
+      "dashboard.reflexStartupHistory": "Historique de demarrage de Reflex",
+      "dashboard.apiLoginHistory": "Historique de connection de l'API",
+      "dashboard.changeApiPassword": "Changer le mot de passe API",
+
+      "dashboard.loggedInAs": "Connecte en tant que {0} ({1})",
+
+      "login.helloText": "Bienvenue! Sur ce panneau de controle, vous pouvez changer les details de votre compte Reflex. Si vous avez des questions, demandez moi sur Discord.",
+      "login.notSpigotPass": "Ne pas entrer son mot de passe Spigot ici !",
+      "login.doLogin": "LET'S GO",
+
+      "ipWhitelist.infoText": "Sur ce panneau, vous pouvez decider des addresses IP qui peuvent etre utilisees pour votre copie de Reflex. Comme ca, vous pouvez empecher votre copie de se faire compromettre. Faites attention que les adresses IP de tous vos serveurs soit autorises.",
+      "ipWhitelist.mustBeIp": "Merci de rentrer une adresse IP valide",
+      "ipWhitelist.addIpAddress": "Ajouter une nouvelle adresse IP",
+      "ipWhitelist.sureDelete": "Etes vous sur de vouloir supprimer {0} entrees?",
+      "ipWhitelist.cannotDisable": "Vous n'etes pas autorise a desactiver ipWhitelist. Contactez nous pour plus d'informations. ",
+      "ipWhitelist.disabledWarning": "Vous n'avez pas active ipWhitelist. Les modifications ne seront pas prises en compte tant que vous n'activez pas la whitelist sur le panneau a gauche.",
+
+      "validation.fieldRequired": "Ce champ est necessaire",
+
+      "passwordChange.infoText": "Modifier le mot de passe va vous deconnecter de toutes les sessions actuellement actives.",
+      "passwordChange.oldPassword": "Mot de passe actuel",
+      "passwordChange.newPassword": "Nouveau mot de passe",
+      "passwordChange.action": "Changer le mot de passe",
+      "passwordChange.success": "Le mot de passe a ete change. Appuyez sur OK pour continuer.",
+
+      "errors.sessionInvalid": "Session invalide",
+      "errors.credentialsInvalid": "Nom d'utilisateur ou mot de passe incorrect.",
+      "errors.oldPasswordIsEqualToNew": "Les mots de passe sont egaux",
+      "errors.oldPasswordIsIncorrect": "Le mot de passe actuel est incorrect",
+      "errors.newPasswordIsWeak": "Le nouveau mot de passe n'est pas assez securise. Il ne peut pas contenir votre nom d'utilisateur ou des symboles repetes.",
+      "errors.default": "Une erreur inconnue s'est produite"
+    }
   }
 ]
