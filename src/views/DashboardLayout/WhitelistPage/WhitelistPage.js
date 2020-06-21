@@ -87,7 +87,9 @@ const WhitelistTable = () => {
       cancelText: t("cancel"),
       onOk: () => callApi("PATCH", "/whitelist/ips", {
         remove: selectedRowKeys.map(key => data.entries[key])
-      }, undefined, t).then(() => reloadData())
+      }, undefined, t)
+        .then(() => setSelectedRowKeys([]))
+        .then(() => reloadData())
     });
   }
 
