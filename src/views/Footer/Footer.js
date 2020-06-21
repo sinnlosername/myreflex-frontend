@@ -10,12 +10,12 @@ export const Footer = () => {
     <Layout.Footer className={classes.footer}>
       <Row>
         <Col span={6}>
-          <Select defaultValue={translationInfo.currentLanguage["iso3"]} size={"small"} onChange={newValue => {
+          <Select defaultValue={translationInfo.currentLanguage.code} size={"small"} onChange={newValue => {
             translationInfo.currentLanguage = translationInfo.getLanguage(newValue);
             updateTranslations();
           }}>
             {translationInfo.languages.map(language => {
-              return (<Select.Option key={language["iso3"]} value={language["iso3"]}>{language.name}</Select.Option>)
+              return (<Select.Option key={language.code} value={language.code}>{language.name}</Select.Option>)
             })}
           </Select>
         </Col>
