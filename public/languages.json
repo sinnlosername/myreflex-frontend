@@ -206,8 +206,7 @@
   },
   {
     "name": "Suomalainen",
-    "iso3": "fin",
-    "browserLanguageRegex": "fi-?.*",
+    "code": "fi",
 	"keys": {
       "helloWorld": "Hei maailma!",
       "reflexDevTeam": "Reflexin kehitystiimi (reflex.rip)",
@@ -275,8 +274,7 @@
   },
   {
     "name": "Français",
-    "iso3": "fre",
-    "browserLanguageRegex": "fr-?.*",
+    "code": "fr",
     "keys": {
       "helloWorld": "Hello World !",
       "reflexDevTeam": "Equipe de developpement Reflex (reflex.rip)",
@@ -344,8 +342,7 @@
   },
   {
     "name": "简体中文",
-    "iso3": "zho",
-    "browserLanguageRegex": "zh-?.*",
+    "code": "zh",
 	"keys": {
       "helloWorld": "你好世界!",
       "reflexDevTeam": "Reflex开发团队 (reflex.rip)",
@@ -413,8 +410,7 @@
   },
   {
     "name": "Italiano",
-    "iso3": "ita",
-    "browserLanguageRegex": "it-?.*",
+    "code": "it",
     "keys": {
       "helloWorld": "Hello world!",
       "reflexDevTeam": "Reflex Development Team (reflex.rip)",
@@ -482,8 +478,7 @@
   },
   {
     "name": "Türk",
-    "iso3": "tur",
-    "browserLanguageRegex": "tr-?.*",
+    "code": "tr",
     "keys": {
       "helloWorld": "Merhaba dünya!",
       "reflexDevTeam": "Reflex Development Team (reflex.rip)",
