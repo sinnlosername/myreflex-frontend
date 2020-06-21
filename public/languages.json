@@ -610,5 +610,73 @@
         "errors.newPasswordIsWeak": "Nowe hasło nie jest wystarczająco silne: jest albo zbyt krótkie, zawiera twoją nazwę użytkownika lub nie zawiera wystarczającej liczby nie powtarzających się symboli.",
         "errors.default": "Wystąpił nieznany błąd"
     }
+  },
+  {
+    "name": "Norsk",
+    "code": "no",
+    "keys": {
+      "helloWorld": "Hei verden!",
+      "reflexDevTeam": "Reflex Utviklingsteam (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "Logg Inn",
+      "spigotUsername": "Spigot Brukernavn",
+      "apiPassword": "API Passord",
+      "ipAddress": "IP adresse",
+      "add": "Legg til",
+      "cancel": "Avbryt",
+      "delete": "Slett",
+      "logout": "Logg ut",
+      "okay": "OK",
+      "timestamp": "Dato/Tid",
+      "browser": "Nettleser",
+      "operatingSystem": "Operativsystem",
+      "fullDateFormat": "DD.MM.YYYY [kl] HH:mm:ss",
+      "country": "Land",
+      "regionName": "Region",
+      "city": "By",
+      "zip": "Post kode",
+      "isp": "ISP",
+      "as": "AS",
+      "org": "Organisasjon",
+      "enabled": "PÅ",
+      "disabled": "AV",
+      "noData": "Ingen data",
+      "warning": "Advarsel",
+
+      "ipInfo.unavailable": "Det er ingen informasjon tilgjengelig om denne IP-adressen.",
+
+      "dashboard.ipWhitelist": "IP-hviteliste",
+      "dashboard.reflexStartupHistory": "Oppstarthistorikk for Refleks",
+      "dashboard.apiLoginHistory": "API-påloggingshistorie",
+      "dashboard.changeApiPassword": "Endre API-passord",
+
+      "dashboard.loggedInAs": "Logget inn som {0} ({1})",
+
+      "login.helloText": "Velkommen! I dette panelet kan du administrere dine Reflex-kontodetaljer, tilgang og mer. Hvis du har spørsmål, vennligst kontakt oss på Discord.",
+      "login.notSpigotPass": "Ikke skriv inn ditt Spigot-passordet her!",
+      "login.doLogin": "LOGG INN!",
+
+      "ipWhitelist.infoText": "I dette panelet kan du administrere hvilke IP-adresser som kan brukes til å starte Reflex. På denne måten kan du forhindre at reflex kopien din blir kompromittert. Forsikre deg om at alle IP-adressene til serverne du bruker Reflex på, er oppført her.",
+      "ipWhitelist.mustBeIp": "Vennligst tast inn en gyldig IP-adresse",
+      "ipWhitelist.addIpAddress": "Legg til en ny IP-adresse",
+      "ipWhitelist.sureDelete": "Er du sikker på at du vil slette {0} oppføringer?",
+      "ipWhitelist.cannotDisable": "Du har ikke lov til å deaktivere IP-hviteliste grunnet sikkerhetsmessige grunner. Kontakt oss for ytterligere informasjon.",
+      "ipWhitelist.disabledWarning": "Du har ikke aktivert IP-hviteliste. Endringer som er gjort på denne siden har ingen effekt før du aktiverer hvitelisten i panelet til venstre.",
+
+      "validation.fieldRequired": "Dette feltet er obligatorisk",
+
+      "passwordChange.infoText": "Endring av passord vil ugyldiggjøre alle de aktive API-øktene, og du må logge inn på nytt.",
+      "passwordChange.oldPassword": "√ passord",
+      "passwordChange.newPassword": "Nytt passord",
+      "passwordChange.action": "Oppdater passord",
+      "passwordChange.success": "Ditt passord har blitt endret. Trykk 'OK' for å fortsette.",
+
+      "errors.sessionInvalid": "Ugyldig økt",
+      "errors.credentialsInvalid": "Ugyldig brukernavn eller passord",
+      "errors.oldPasswordIsEqualToNew": "Passordene er identiske.",
+      "errors.oldPasswordIsIncorrect": "Det nåværende passordet du oppga er feil.",
+      "errors.newPasswordIsWeak": "Det nye passordet er ikke sterkt nok: det er enten for kort, inneholder brukernavnet ditt eller inneholder ikke nok ikke-repeterende symboler.",
+      "errors.default": "En ukjent feil oppstod"
+	}
   }
 ]
