@@ -268,7 +268,7 @@
       "errors.credentialsInvalid": "Kelvoton käyttäjänimi tai salasana.",
       "errors.oldPasswordIsEqualToNew": "Salasanat ovat identtiset.",
       "errors.oldPasswordIsIncorrect": "Nykyinen salasana jonka kirjotit ei ole kelvollinen.",
-      "errors.newPasswordIsWeak": "Uusi salasanasi ei ole tarpeeksi turvallinen: se on joko liian lyhyt, sisältää käyttäjänimesi, tai ei sisällä tarpeeksi toistuvia kirjaimia.",
+      "errors.newPasswordIsWeak": "Uusi salasanasi ei ole tarpeeksi turvallinen: se on joko liian lyhyt, sisältää käyttäjänimesi, tai sisältää liian paljon toistuvia kirjaimia.",
       "errors.default": "Tuntematon virhe tapahtui"
     }
   },
