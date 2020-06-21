@@ -39,15 +39,28 @@ export const WhitelistPage = () => {
 const WhitelistAdd = ({form}) => {
   const {t} = useTranslation();
 
+  // rule: any, value: any, callback: any
+  function ipListValidator(rule, value, callback) {
+    if (value == null) {
+      callback(t("validation.fieldRequired"))
+      return;
+    }
+
+    const regex = ipRegex.v4({exact: true});
+    if (!value.split(",").map(value => value.trim()).every(value => value.match(regex))) {
+      callback(t("ipWhitelist.mustBeIp"))
+      return;
+    }
+
+    callback();
+  }
+
   return (
     <Form form={form} name="login" layout="inline">
       <Form.Item
-        name="ip"
+        name="ipAddresses"
         className={cls.addFormItem}
-        rules={[
-          {required: true, message: t("validation.fieldRequired")},
-          {pattern: ipRegex.v4({exact: true}), message: t("ipWhitelist.mustBeIp")}
-        ]}>
+        rules={[ {validator: ipListValidator } ]}>
         <Input placeholder={t("ipAddress")} size="large"/>
       </Form.Item>
     </Form>
@@ -74,7 +87,9 @@ const WhitelistTable = () => {
       cancelText: t("cancel"),
       cancelButtonProps: {size: "large"},
       onOk: () => addForm.validateFields()
-        .then(fields => callApi("POST", "/whitelist/ips/" + fields.ip, {}, undefined, t))
+        .then(fields => callApi("PATCH", "/whitelist/ips", {
+          add: fields.ipAddresses.split(",").map(value => value.trim())
+        }, undefined, t))
         .then(() => reloadData())
     });
   }
