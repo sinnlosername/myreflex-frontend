@@ -413,7 +413,7 @@
     "code": "it",
     "keys": {
       "helloWorld": "Hello world!",
-      "reflexDevTeam": "Reflex Developement Team (reflex.rip)",
+      "reflexDevTeam": "Reflex Development Team (reflex.rip)",
       "reflex": "Reflex",
       "signIn": "Accedi",
       "spigotUsername": "Spigot Username",
@@ -427,7 +427,7 @@
       "timestamp": "Data/Ora",
       "browser": "Browser",
       "operatingSystem": "Sitema Operativo",
-      "fullDateFormat": "DD.MM.YYYY [at] HH:mm:ss",
+      "fullDateFormat": "DD.MM.YYYY [alle] HH:mm:ss",
       "country": "Nazione",
       "regionName": "Regione",
       "city": "Città",
