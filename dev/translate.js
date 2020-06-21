@@ -7,7 +7,7 @@ if (process.argv.length < 3) {
   process.exit(1);
 }
 
-const translateLanguage = languages.find(lang => lang["iso3"] === process.argv[2]);
+const translateLanguage = languages.find(lang => lang.code === process.argv[2]);
 if (translateLanguage == null) {
   console.log("Language not found");
   process.exit(1);

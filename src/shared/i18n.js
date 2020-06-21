@@ -86,8 +86,8 @@ class TranslationInfo {
     return "[translation missing - you lazy fool]"
   }
 
-  getLanguage(iso3) {
-    return iso3 == null ? null : this.languages.find(lang => lang["iso3"] === iso3);
+  getLanguage(code) {
+    return code == null ? null : this.languages.find(lang => lang.code === code);
   }
 
   get fallbackLanguage() {
@@ -95,16 +95,27 @@ class TranslationInfo {
   }
 
   get browserLanguage() {
-    return this.languages.find(lang => window.navigator.language.match(lang["browserLanguageRegex"]));
+    const exactMatch = this.languages.find(lang => lang.code === window.navigator.language);
+    if (exactMatch != null) {
+      return exactMatch;
+    }
+
+    const simpleCode = window.navigator.language.split("-")[0];
+    return this.languages.find(lang => lang.code === simpleCode);
   }
 
   get currentLanguage() {
-    return this.getLanguage(window.localStorage.getItem("language"))
-      ?? this.browserLanguage
-      ?? this.fallbackLanguage;
+    const savedLanguage = this.getLanguage(window.localStorage.getItem("languageCode"));
+    if (savedLanguage != null) {
+      return savedLanguage;
+    }
+
+    const defaultLanguage = this.browserLanguage ?? this.fallbackLanguage;
+    this.currentLanguage = defaultLanguage;
+    return defaultLanguage;
   }
 
   set currentLanguage(value) {
-    window.localStorage.setItem("language", value["iso3"]);
+    window.localStorage.setItem("languageCode", value.code);
   }
 }
