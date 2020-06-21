@@ -97,8 +97,8 @@
       "org": "Organisation",
       "enabled": "AN",
       "disabled": "AUS",
-	  "noData": "Keine Daten",
-	  "warning": "Warnung",
+      "noData": "Keine Daten",
+      "warning": "Warnung",
 
       "ipInfo.unavailable": "Zu dieser IP-Adresse sind keine Informationen verfügbar.",
 
@@ -118,7 +118,7 @@
       "ipWhitelist.addIpAddress": "Neue IP-Adresse hinzufügen",
       "ipWhitelist.sureDelete": "Bist Du Dir sicher, dass Du {0} Einträge löschen möchtest?",
       "ipWhitelist.cannotDisable": "Aufgrund einer Administrationsrichtlinie kannst Du die Whitelist nicht deaktivieren. Kontaktiere den Support für weitere Informationen.",
-	  "ipWhitelist.disabledWarning": "Du hast die Whitelist nicht aktiviert. Die Änderungen werden erst berücksichtigt, wenn Du die Whitelist im Seitenmenü aktivierst.",
+      "ipWhitelist.disabledWarning": "Du hast die Whitelist nicht aktiviert. Die Änderungen werden erst berücksichtigt, wenn Du die Whitelist im Seitenmenü aktivierst.",
 
       "validation.fieldRequired": "Dieses Feld wird benötigt",
 
@@ -132,7 +132,7 @@
       "errors.credentialsInvalid": "Ungültiger Nutzername oder ungültiges Passwort",
       "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch",
       "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt",
-	  "errors.newPasswordIsWeak": "Das neue Password ist zu schwach. Es ist entweder zu kurz, enthält den Nutzernamen oder sich zu oft wiederholende Zeichen.",
+      "errors.newPasswordIsWeak": "Das neue Password ist zu schwach. Es ist entweder zu kurz, enthält den Nutzernamen oder sich zu oft wiederholende Zeichen.",
       "errors.default": "Ein unbekannter Fehler ist aufgetreten"
     }
   },
@@ -165,8 +165,8 @@
       "org": "Организация",
       "enabled": "ВКЛ",
       "disabled": "ВЫКЛ",
-	  "noData": "Нет данных",
-	  "warning": "Внимание",
+      "noData": "Нет данных",
+      "warning": "Внимание",
 
       "ipInfo.unavailable": "Не удалось получить информацию об этом IP-адресе.",
 
@@ -186,7 +186,7 @@
       "ipWhitelist.addIpAddress": "Добавить новый IP-адрес",
       "ipWhitelist.sureDelete": "Вы уверены, что хотите удалить {0} записей?",
       "ipWhitelist.cannotDisable": "Вы не можете отключить вайтлист IP из соображений безопасности. Пожалуйста, свяжитесь с нами, если у вас есть вопросы.",
-	  "ipWhitelist.disabledWarning": "Вы не включили вайтлист IP. Изменения, сделанные на этой странице, не вступят в силу, пока вы не включите вайтлист в панели слева.",
+      "ipWhitelist.disabledWarning": "Вы не включили вайтлист IP. Изменения, сделанные на этой странице, не вступят в силу, пока вы не включите вайтлист в панели слева.",
 
       "validation.fieldRequired": "Это поле является обязательным",
 
@@ -200,14 +200,14 @@
       "errors.credentialsInvalid": "Неверное имя пользователя или пароль",
       "errors.oldPasswordIsEqualToNew": "Пароли совпадают.",
       "errors.oldPasswordIsIncorrect": "Неверно введён текущий пароль.",
-	  "errors.newPasswordIsWeak": "Новый пароль недостаточно надёжен: он либо слишком короткий, либо содержит ваше имя, либо содержит недостаточно неповторяющихся символов.",
+      "errors.newPasswordIsWeak": "Новый пароль недостаточно надёжен: он либо слишком короткий, либо содержит ваше имя, либо содержит недостаточно неповторяющихся символов.",
       "errors.default": "Произошла неизвестная ошибка"
     }
   },
   {
     "name": "Suomalainen",
     "code": "fi",
-	"keys": {
+    "keys": {
       "helloWorld": "Hei maailma!",
       "reflexDevTeam": "Reflexin kehitystiimi (reflex.rip)",
       "reflex": "Reflex",
@@ -343,7 +343,7 @@
   {
     "name": "简体中文",
     "code": "zh",
-	"keys": {
+    "keys": {
       "helloWorld": "你好世界!",
       "reflexDevTeam": "Reflex开发团队 (reflex.rip)",
       "reflex": "Reflex",
@@ -677,6 +677,6 @@
       "errors.oldPasswordIsIncorrect": "Det nåværende passordet du oppga er feil.",
       "errors.newPasswordIsWeak": "Det nye passordet er ikke sterkt nok: det er enten for kort, inneholder brukernavnet ditt eller inneholder ikke nok ikke-repeterende symboler.",
       "errors.default": "En ukjent feil oppstod"
-	}
+    }
   }
 ]
