@@ -6,7 +6,7 @@
     "fallback": true,
     "keys": {
       "helloWorld": "Hello world!",
-      "reflexDevTeam": "Reflex Developement Team (reflex.rip)",
+      "reflexDevTeam": "Reflex Development Team (reflex.rip)",
       "reflex": "Reflex",
       "signIn": "Log In",
       "spigotUsername": "Spigot Username",
@@ -420,7 +420,7 @@
     "browserLanguageRegex": "it-?.*",
     "keys": {
       "helloWorld": "Hello world!",
-      "reflexDevTeam": "Reflex Developement Team (reflex.rip)",
+      "reflexDevTeam": "Reflex Development Team (reflex.rip)",
       "reflex": "Reflex",
       "signIn": "Accedi",
       "spigotUsername": "Spigot Username",
@@ -481,6 +481,75 @@
       "errors.oldPasswordIsIncorrect": "La vecchia Password non è valida.",
       "errors.newPasswordIsWeak": "La nuova password non è abbastanza sicura: È troppo corta, oppure contiene il tuo nome utente o non contiene abbastanza simboli non ripetitivi.",
       "errors.default": "Si è verificato un errore sconosciuto"
+    }
+  },
+  {
+    "name": "Türk",
+    "iso3": "tur",
+    "browserLanguageRegex": "tr-?.*",
+    "keys": {
+      "helloWorld": "Merhaba dünya!",
+      "reflexDevTeam": "Reflex Development Team (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "Giriş Yap",
+      "spigotUsername": "Spigot Kullanıcı Adı",
+      "apiPassword": "API Şifresi",
+      "ipAddress": "IP Adresi",
+      "add": "Ekle",
+      "cancel": "İptal et",
+      "delete": "Sil",
+      "logout": "Çıkış yap",
+      "okay": "TAMAM",
+      "timestamp": "Tarih/Zaman",
+      "browser": "Tarayıcı",
+      "operatingSystem": "İşletim Sistemi",
+      "fullDateFormat": "DD.MM.YYYY [saat] HH:mm:ss",
+      "country": "Ülke",
+      "regionName": "Bölge",
+      "city": "Şehir",
+      "zip": "ZIP",
+      "isp": "ISP",
+      "as": "AS",
+      "org": "Organizasyon",
+      "enabled": "AÇIK",
+      "disabled": "KAPALI",
+      "noData": "Veri yok",
+      "warning": "Uyarı",
+
+      "ipInfo.unavailable": "Bu IP adresi hakkında mevcut bir bilgi yok.",
+
+      "dashboard.ipWhitelist": "IP Beyaz Liste",
+      "dashboard.reflexStartupHistory": "Reflex Başlangıç Geçmişi",
+      "dashboard.apiLoginHistory": "API Giriş Geçmişi",
+      "dashboard.changeApiPassword": "API Şifresini Değiştir",
+
+      "dashboard.loggedInAs": "{0} ({1}) olarak giriş yaptınız",
+
+      "login.helloText": "Merhaba! Bu paneli kullanarak reflex hesap detaylarını ve daha fazlasını yönetebilirsin. Eğer sorun varsa lütfen bizimle Discord üzerinden iletişime geç.",
+      "login.notSpigotPass": "Buraya spigot şifrenizi girmeyin!",
+      "login.doLogin": "Giriş Yap",
+
+      "ipWhitelist.infoText": "Bu panelde hangi IP adreslerinin Reflex kopyanızı kullanabileceğini yönetebilirsiniz. Bu şekilde kopyanızın güvenliğini sağlayabilirsiniz. Reflex kullandığınız bütün sunucuların IP adreslerinin burada listelendiğinden emin olun.",
+      "ipWhitelist.mustBeIp": "Lütfen geçerli bir IP adresi girin",
+      "ipWhitelist.addIpAddress": "Yeni bir IP adresi ekleyin",
+      "ipWhitelist.sureDelete": "{0} kayıtlarını silmek istediğinizden emin misiniz?",
+      "ipWhitelist.cannotDisable": "Güvenlik nedeniyle IP Beyaz Listesini devre dışı bırakmanıza izin verilmiyor. Daha fazla bilgi için lütfen bizimle iletişime geçin.",
+      "ipWhitelist.disabledWarning": "IP Beyaz Listesini etkinleştirmemişsiniz. Bu sayfada yaptığınız değişiklikler paneldeki beyaz listeyi etkinleştirene kadar etkili olmaz.",
+
+      "validation.fieldRequired": "Bu alan zorunludur",
+
+      "passwordChange.infoText": "Şifrenizi değiştirmek, etkin olan bütün API oturumlarınızı geçersiz kılacaktır ve yeniden giriş yapmak zorunda kalacaksınız.",
+      "passwordChange.oldPassword": "Mevcut şifre",
+      "passwordChange.newPassword": "Yeni şifre",
+      "passwordChange.action": "Şifreyi Değiştir",
+      "passwordChange.success": "Şifreniz değiştirildi. İlerlemek için 'TAMAM' butonuna basın.",
+
+      "errors.sessionInvalid": "Geçersiz oturum",
+      "errors.credentialsInvalid": "Geçersiz kullanıcı adı veya şifre",
+      "errors.oldPasswordIsEqualToNew": "Girdiğiniz şifre eski şifrenizle aynı.",
+      "errors.oldPasswordIsIncorrect": "Girdiğiniz mevcut şifre yanlış.",
+      "errors.newPasswordIsWeak": "Yeni şifre yeterince güvenli değil: ya çok kısa, ya kullanıcı adınızı içeriyor, ya da kendini tekrar eden karakterler içeriyor.",
+      "errors.default": "Bilinmeyen bir hata oluştu"
     }
   }
 ]
