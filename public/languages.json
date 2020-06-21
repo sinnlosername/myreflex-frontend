@@ -277,9 +277,9 @@
     }
   },
   {
-    "name": "Française",
+    "name": "Français",
     "iso3": "fre",
-    "browserLanguageRegex": "f-?.*",
+    "browserLanguageRegex": "fr-?.*",
     "keys": {
       "helloWorld": "Hello World !",
       "reflexDevTeam": "Equipe de developpement Reflex (reflex.rip)",
@@ -343,6 +343,75 @@
       "errors.oldPasswordIsIncorrect": "Le mot de passe actuel est incorrect",
       "errors.newPasswordIsWeak": "Le nouveau mot de passe n'est pas assez securise. Il ne peut pas contenir votre nom d'utilisateur ou des symboles repetes.",
       "errors.default": "Une erreur inconnue s'est produite"
+    }
+  },
+  {
+    "name": "简体中文",
+    "iso3": "zho",
+    "browserLanguageRegex": "zh-?.*",
+	"keys": {
+      "helloWorld": "你好世界!",
+      "reflexDevTeam": "Reflex开发团队 (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "登录",
+      "spigotUsername": "SpigotMC用户名",
+      "apiPassword": "API密码",
+      "ipAddress": "IP地址",
+      "add": "添加",
+      "cancel": "取消",
+      "delete": "删除",
+      "logout": "登出",
+      "okay": "确定",
+      "timestamp": "日期/时间",
+      "browser": "浏览器",
+      "operatingSystem": "操作系统",
+      "fullDateFormat": "YYYY年MM月DD日 HH:mm:ss",
+      "country": "国家",
+      "regionName": "地区",
+      "city": "城市",
+      "zip": "邮政编码",
+      "isp": "ISP提供商",
+      "as": "AS",
+      "org": "组织",
+      "enabled": "启用",
+      "disabled": "停用",
+      "noData": "没有数据",
+      "warning": "警告",
+
+      "ipInfo.unavailable": "没有有关此IP地址的信息.",
+
+      "dashboard.ipWhitelist": "IP白名单",
+      "dashboard.reflexStartupHistory": "Reflex启动记录",
+      "dashboard.apiLoginHistory": "API登录记录",
+      "dashboard.changeApiPassword": "修改API密码",
+
+      "dashboard.loggedInAs": "已登录为 {0} ({1})",
+
+      "login.helloText": "欢迎! 在此面板中，您可以管理您的Reflex帐户信息,访问权限等. 如有任何疑问,请通过Discord与我们联系。",
+      "login.notSpigotPass": "请不要在此输入你的SpigotMC账号密码!",
+      "login.doLogin": "登录",
+
+      "ipWhitelist.infoText": "在此这里,您可以管理可以使用您的Reflex授权的IP地址. 你可以使用这个功能来防止你的Reflex授权被分发/破坏,请确保您使用Reflex的所有服务器的IP地址都在此列出.",
+      "ipWhitelist.mustBeIp": "请输入一个有效的IP地址!",
+      "ipWhitelist.addIpAddress": "添加一个新的IP",
+      "ipWhitelist.sureDelete": "你确定你要删除这 {0} 个IP吗?",
+      "ipWhitelist.cannotDisable": "出于安全原因,您不能禁用IP白名单.请联系我们以获得更多信息.",
+      "ipWhitelist.disabledWarning": "你还没有启用IP白名单！请在左边的面板上启用它,否则在本页面上所做的任何更改将不会生效.",
+
+      "validation.fieldRequired": "此字段为必填字段",
+
+      "passwordChange.infoText": "修改密码将使所有活动的API会话无效,并且您将被重新登录。",
+      "passwordChange.oldPassword": "当前密码",
+      "passwordChange.newPassword": "新的密码",
+      "passwordChange.action": "修改密码",
+      "passwordChange.success": "已成功修改密码! 点击 '确认' 按钮继续.",
+
+      "errors.sessionInvalid": "无效的会话",
+      "errors.credentialsInvalid": "用户名或密码无效",
+      "errors.oldPasswordIsEqualToNew": "新的密码与你当前使用的密码相同!",
+      "errors.oldPasswordIsIncorrect": "您输入的当前密码不正确.",
+      "errors.newPasswordIsWeak": "新的密码不安全: 密码太短 , 包含你的用户名 或 没有足够的非重复符号.",
+      "errors.default": "发生未知错误"
     }
   }
 ]
