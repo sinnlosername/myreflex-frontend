@@ -413,7 +413,7 @@
     "code": "it",
     "keys": {
       "helloWorld": "Hello world!",
-      "reflexDevTeam": "Reflex Development Team (reflex.rip)",
+      "reflexDevTeam": "Reflex Developement Team (reflex.rip)",
       "reflex": "Reflex",
       "signIn": "Accedi",
       "spigotUsername": "Spigot Username",
@@ -427,7 +427,7 @@
       "timestamp": "Data/Ora",
       "browser": "Browser",
       "operatingSystem": "Sitema Operativo",
-      "fullDateFormat": "DD.MM.YYYY [alle] HH:mm:ss",
+      "fullDateFormat": "DD.MM.YYYY [at] HH:mm:ss",
       "country": "Nazione",
       "regionName": "Regione",
       "city": "Città",
@@ -443,9 +443,9 @@
       "ipInfo.unavailable": "Non ci sono informazioni disponibili riguardante questo indirizzo IP.",
 
       "dashboard.ipWhitelist": "IP Whitelist",
-      "dashboard.reflexStartupHistory": "Cronologia Avviamenti Reflex",
+      "dashboard.reflexStartupHistory": "Cronologia Avviamenti",
       "dashboard.apiLoginHistory": "Cronologia Accessi API",
-      "dashboard.changeApiPassword": "Cronologia Cambio Password Dell'API",
+      "dashboard.changeApiPassword": "Cronologia Passwords",
 
       "dashboard.loggedInAs": "Connesso come {0} ({1})",
 
@@ -453,7 +453,7 @@
       "login.notSpigotPass": "Non inserire la tua Password di Spigot qui!",
       "login.doLogin": "ENTRA",
 
-      "ipWhitelist.infoText": "In questo pannello puoi scegliere quale indirizzo IP può essere usato per lanciare il tuo Reflex. In questo modo puoi prevenire che la tua copia del Plugin di Reflex sia utilizzabile da persone esterne. Perfavore assicurati che gli indirizzi IP di tutti i server dove utilizzi Reflex siano inseriti in questa lista.",
+      "ipWhitelist.infoText": "In questo pannello puoi scegliere su quali indirizzi IP Reflex potrà essere utilizzato. In questo modo puoi prevenire che la tua copia del Plugin di Reflex sia utilizzabile da persone esterne. Perfavore assicurati che gli indirizzi IP di tutti i server dove utilizzi Reflex siano inseriti in questa lista.",
       "ipWhitelist.mustBeIp": "Perfavore inserisci un indirizzo IP valido",
       "ipWhitelist.addIpAddress": "Aggiungi un nuovo IP",
       "ipWhitelist.sureDelete": "Sei sicuro di voler eliminare {0} IP?",
@@ -579,7 +579,7 @@
         "ipInfo.unavailable": "Nie ma żadnych informacji na temat tego adresu IP.",
 
         "dashboard.ipWhitelist": "Whitelista IP",
-        "dashboard.reflexStartupHistory": "Historia uruchamiania Reflex",
+        "dashboard.reflexStartupHistory": "Historia uruchamiania",
         "dashboard.apiLoginHistory": "Historia logowania przez API",
         "dashboard.changeApiPassword": "Zmiana hasła API",
         "dashboard.loggedInAs": "Zalogowano jako {0} ({1})",
