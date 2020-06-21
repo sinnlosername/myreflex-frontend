@@ -110,15 +110,15 @@
       "dashboard.loggedInAs": "Angemeldet als {0} ({1})",
 
       "login.helloText": "Willkommen! In diesem Panel kannst Du deine Reflex-Account-Details, Zugriffsberechtigungen und mehr verwalten. Wenn Du Fragen oder Wünsche hast, schreibe uns gerne eine Nachricht auf Discord.",
-      "login.notSpigotPass": "Bitte nutze dafür nicht dein Spigot-Passwort!",
+      "login.notSpigotPass": "Bitte nutze dafür nicht Dein Spigot-Passwort!",
       "login.doLogin": "LOS GEHTS",
 
-      "ipWhitelist.infoText": "In diesem Panel kannst Du einstellen, welche IP-Adressen deine Reflex-Version starten dürfen. Damit kannst Du verhindern, dass Deine Kopie von Reflex ohne Deine Erlaubnis genutzt wird. Denk daran, alle Server einzutragen, auf denen Du Reflex nutzt.",
+      "ipWhitelist.infoText": "In diesem Panel kannst Du einstellen, welche IP-Adressen Deine Reflex-Version starten dürfen. Damit kannst Du verhindern, dass Deine Kopie von Reflex ohne Deine Erlaubnis genutzt wird. Denk daran, alle Server einzutragen, auf denen Du Reflex nutzt.",
       "ipWhitelist.mustBeIp": "Deine Eingabe muss eine gültige IP-Adresse sein.",
       "ipWhitelist.addIpAddress": "Neue IP-Adresse hinzufügen",
-      "ipWhitelist.sureDelete": "Bist Du dir sicher, dass Du {0} Einträge löschen möchtest?",
+      "ipWhitelist.sureDelete": "Bist Du Dir sicher, dass Du {0} Einträge löschen möchtest?",
       "ipWhitelist.cannotDisable": "Aufgrund einer Administrationsrichtlinie kannst Du die Whitelist nicht deaktivieren. Kontaktiere den Support für weitere Informationen.",
-	  "ipWhitelist.disabledWarning": "Du hast die Whitelist nicht aktiviert. Änderungen werden erst in Effekt treten, wenn Du die Whitelist im Seitenmenü aktivierst.",
+	  "ipWhitelist.disabledWarning": "Du hast die Whitelist nicht aktiviert. Die Änderungen werden erst berücksichtigt, wenn Du die Whitelist im Seitenmenü aktivierst.",
 
       "validation.fieldRequired": "Dieses Feld wird benötigt",
 
@@ -132,7 +132,7 @@
       "errors.credentialsInvalid": "Ungültiger Nutzername oder ungültiges Passwort",
       "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch",
       "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt",
-	  "errors.newPasswordIsWeak": "Das neue Password ist zu schwach. Es ist entweder zu kurz, enthält den Nutzernamen oder enthält nicht genug sich nicht wiederholende Zeichen",
+	  "errors.newPasswordIsWeak": "Das neue Password ist zu schwach. Es ist entweder zu kurz, enthält den Nutzernamen oder sich zu oft wiederholende Zeichen.",
       "errors.default": "Ein unbekannter Fehler ist aufgetreten"
     }
   },

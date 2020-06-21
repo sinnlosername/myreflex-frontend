@@ -92,11 +92,11 @@ const HeaderRow = () => {
 
   return (
     <Row align="middle" className={classes.headerRow}>
-      <Col span={18} className={classes.headerTitleCol}>
+      <Col span={8} className={classes.headerTitleCol}>
         <Typography.Link className={classes.headerTitle} href="https://g.reflex.rip/spigot"
                          target="_blank">{t("reflex")}</Typography.Link>
       </Col>
-      <Col span={6} className={classes.headerMenuCol}>
+      <Col span={16} className={classes.headerMenuCol}>
         <Dropdown overlay={<HeaderMenu/>} placement="bottomCenter">
           <Button>
             {t("dashboard.loggedInAs", user.username, user["userID"])}
