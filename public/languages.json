@@ -551,5 +551,73 @@
       "errors.newPasswordIsWeak": "Yeni şifre yeterince güvenli değil: ya çok kısa, ya kullanıcı adınızı içeriyor, ya da kendini tekrar eden karakterler içeriyor.",
       "errors.default": "Bilinmeyen bir hata oluştu"
     }
+  },
+  {
+    "name": "Polskie",
+    "iso3": "pol",
+    "browserLanguageRegex": "pl-?.*",
+    "keys": {
+        "helloWorld": "Witaj świecie!",
+        "reflexDevTeam": "Reflex Development Team (reflex.rip)",
+        "reflex": "Reflex",
+        "signIn": "Logowanie",
+        "spigotUsername": "Nazwa użytkownika Spigot",
+        "apiPassword": "Hasło API",
+        "ipAddress": "Adres IP",
+        "add": "Dodaj",
+        "cancel": "Anuluj",
+        "delete": "Usuń",
+        "logout": "Wyloguj się",
+        "okay": "OK",
+        "timestamp": "Data/Godzina",
+        "browser": "Przeglądarka",
+        "operatingSystem": "System operacyjny",
+        "fullDateFormat": "DD.MM.YYYY [o] HH:mm:ss",
+        "country": "Kraj",
+        "regionName": "Region",
+        "city": "Miasto",
+        "zip": "Kod pocztowy",
+        "isp": "ISP",
+        "as": "AS",
+        "org": "Organizacja",
+        "enabled": "ON",
+        "disabled": "OFF",
+        "noData": "Brak danych",
+        "warning": "Ostrzeżenie",
+
+        "ipInfo.unavailable": "Nie ma żadnych informacji na temat tego adresu IP.",
+
+        "dashboard.ipWhitelist": "Whitelista IP",
+        "dashboard.reflexStartupHistory": "Historia uruchamiania Reflex",
+        "dashboard.apiLoginHistory": "Historia logowania przez API",
+        "dashboard.changeApiPassword": "Zmiana hasła API",
+        "dashboard.loggedInAs": "Zalogowano jako {0} ({1})",
+
+        "login.helloText": "Witaj! W tym panelu możesz zarządzać swoimi szczegółami konta Reflex, dostępem i więcej. Jeżeli masz jakieś pytania możesz skontaktować się z nami na Discordzie.",
+        "login.notSpigotPass": "Nie wpisuj tutaj swojego hasła Spigot!",
+        "login.doLogin": "LET'S GO",
+
+        "ipWhitelist.infoText": "W tym panelu możesz zarządzać które adresy IP mogą być użyte aby wystartować twoją kopie Reflex. Dzięki temu możesz zapobiec kradzieży twojej kopi. Upewnij się że wszystkie adresy IP serwerów na których używasz Reflex są tutaj dodane.",
+        "ipWhitelist.mustBeIp": "Proszę wprowadzić prawidłowy adres IP",
+        "ipWhitelist.addIpAddress": "Dodaj nowy adres IP",
+        "ipWhitelist.sureDelete": "Czy jesteś pewny że chcesz usunąć {0} wpisów?",
+        "ipWhitelist.cannotDisable": "Ze względów bezpieczeństwa nie można wyłączyć whitelisty IP. Skontaktuj się z nami w celu uzyskania dalszych informacji.",
+        "ipWhitelist.disabledWarning": "Nie włączyłeś whitelisty IP. Zmiany na tej stronie nie będą miały efektu dopóki nie włączysz whitelisty na panelu po lewej.",
+
+        "validation.fieldRequired": "To pole jest wymagane",
+
+        "passwordChange.infoText": "Zmiana hasła unieważni wszystkie aktywne sesje API i zmusi cię do ponownego logowania.",
+        "passwordChange.oldPassword": "Aktualne hasło",
+        "passwordChange.newPassword": "Nowe hasło",
+        "passwordChange.action": "Zmień hasło",
+        "passwordChange.success": "Twoje hasło zostało zmienione. Naciśnij 'OK' aby kontynuować.",
+
+        "errors.sessionInvalid": "Nieprawidłowa sesja",
+        "errors.credentialsInvalid": "Nieprawidłowa nazwa użytkownika lub hasło",
+        "errors.oldPasswordIsEqualToNew": "Hasła są identyczne.",
+        "errors.oldPasswordIsIncorrect": "Aktualne hasło które wpisałeś jest nieprawidłowe.",
+        "errors.newPasswordIsWeak": "Nowe hasło nie jest wystarczająco silne: jest albo zbyt krótkie, zawiera twoją nazwę użytkownika lub nie zawiera wystarczającej liczby nie powtarzających się symboli.",
+        "errors.default": "Wystąpił nieznany błąd"
+    }
   }
 ]
