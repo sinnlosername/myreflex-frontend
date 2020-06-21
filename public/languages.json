@@ -206,5 +206,74 @@
 	  "errors.newPasswordIsWeak": "Новый пароль недостаточно надёжен: он либо слишком короткий, либо содержит ваше имя, либо содержит недостаточно неповторяющихся символов.",
       "errors.default": "Произошла неизвестная ошибка"
     }
+  },
+  {
+    "name": "Suomalainen",
+    "iso3": "fin",
+    "browserLanguageRegex": "fi-?.*",
+	"keys": {
+      "helloWorld": "Hei maailma!",
+      "reflexDevTeam": "Reflexin kehitystiimi (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "Kirjaudu sisään",
+      "spigotUsername": "Spigot käyttäjänimi",
+      "apiPassword": "API Salasana",
+      "ipAddress": "IP-osoite",
+      "add": "Lisää",
+      "cancel": "Peruuta",
+      "delete": "Poista",
+      "logout": "Logout",
+      "okay": "OK",
+      "timestamp": "Pvm/Aika",
+      "browser": "Selain",
+      "operatingSystem": "Käyttöjärjestelmä",
+      "fullDateFormat": "DD.MM.YYYY [klo.] HH:mm:ss",
+      "country": "Maa",
+      "regionName": "Alue",
+      "city": "Kaupunki",
+      "zip": "Postinumero",
+      "isp": "ISP",
+      "as": "AS",
+      "org": "Organisaatio",
+      "enabled": "Päällä",
+      "disabled": "Pois päältä",
+      "noData": "Ei tietoa",
+      "warning": "Varoitus",
+
+      "ipInfo.unavailable": "Tästä IP-osoitteesta ei löytynyt tietoa.",
+
+      "dashboard.ipWhitelist": "IP-valkolista",
+      "dashboard.reflexStartupHistory": "Reflex Käynnistys historia",
+      "dashboard.apiLoginHistory": "API kirjautumis historia",
+      "dashboard.changeApiPassword": "Vaihda API salasana",
+
+      "dashboard.loggedInAs": "Kirjautuneena sisään nimellä {0} ({1})",
+
+      "login.helloText": "Tervetuloa! Tässä paneelissa voit hoitaa sinun Reflex käyttäjän tietoja, pääsyä, ja muutakin. Jos sinulla on kysymyksiä, kontaktoi meidät Discordissa.",
+      "login.notSpigotPass": "Elä syötä sinun SpigotMC-salasanaa tänne!",
+      "login.doLogin": "Kirjaudu sisään",
+
+      "ipWhitelist.infoText": "Tässä paneelissa voit hoitaa sitä mitkä IP-osoitteet voivat käynnistyä sinun Reflex kopion kanssa. Tällä tavalla voit estää sen että sinun Reflex kopio kompromisoidaan. Pidäthän huolta että sinun palvelimen kaikki IP-osoitteet missä käytät Reflexiä ovat listattu täällä.",
+      "ipWhitelist.mustBeIp": "Syötäthän kelvollisen IP-osoitteen",
+      "ipWhitelist.addIpAddress": "Lisää uusi IP-osoite",
+      "ipWhitelist.sureDelete": "Oletko varma että haluat poistaa {0} merkintää?",
+      "ipWhitelist.cannotDisable": "Et voi disabloida IP-valkolistaa turvallisuussyistä.",
+      "ipWhitelist.disabledWarning": "Et ole laittanut IP-valkolistaa päälle. Muutokset tällä sivulla ei tule käyttöön, kunnes enabloit IP-valkolistan vasemmalla olevasta palkista.",
+
+      "validation.fieldRequired": "Tämä kohta on vaadittu",
+
+      "passwordChange.infoText": "Salasanan vaihtaminen kumoaa kaikki aikasemmat API sessiot, ja joudut kirjata ne takaisin sisälle.",
+      "passwordChange.oldPassword": "Nykyinen salasana",
+      "passwordChange.newPassword": "Uusi salasana",
+      "passwordChange.action": "Päivitä salasana",
+      "passwordChange.success": "Salasanasi on vaihdettu Paina 'OK' jatkaaksesi.",
+
+      "errors.sessionInvalid": "Kelvoton sessio.",
+      "errors.credentialsInvalid": "Kelvoton käyttäjänimi tai salasana.",
+      "errors.oldPasswordIsEqualToNew": "Salasanat ovat identtiset.",
+      "errors.oldPasswordIsIncorrect": "Nykyinen salasana jonka kirjotit ei ole kelvollinen.",
+      "errors.newPasswordIsWeak": "Uusi salasanasi ei ole tarpeeksi turvallinen: se on joko liian lyhyt, sisältää käyttäjänimesi, tai ei sisällä tarpeeksi toistuvia kirjaimia.",
+      "errors.default": "Tuntematon virhe tapahtui"
+    }
   }
 ]
