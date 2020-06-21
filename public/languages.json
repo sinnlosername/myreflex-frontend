@@ -546,8 +546,7 @@
   },
   {
     "name": "Polskie",
-    "iso3": "pol",
-    "browserLanguageRegex": "pl-?.*",
+    "code": "pl",
     "keys": {
         "helloWorld": "Witaj świecie!",
         "reflexDevTeam": "Reflex Development Team (reflex.rip)",
