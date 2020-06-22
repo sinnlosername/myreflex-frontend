@@ -97,8 +97,8 @@
       "org": "Organisation",
       "enabled": "AN",
       "disabled": "AUS",
-	  "noData": "Keine Daten",
-	  "warning": "Warnung",
+      "noData": "Keine Daten",
+      "warning": "Warnung",
 
       "ipInfo.unavailable": "Zu dieser IP-Adresse sind keine Informationen verfügbar.",
 
@@ -118,7 +118,7 @@
       "ipWhitelist.addIpAddress": "Neue IP-Adresse hinzufügen",
       "ipWhitelist.sureDelete": "Bist Du Dir sicher, dass Du {0} Einträge löschen möchtest?",
       "ipWhitelist.cannotDisable": "Aufgrund einer Administrationsrichtlinie kannst Du die Whitelist nicht deaktivieren. Kontaktiere den Support für weitere Informationen.",
-	  "ipWhitelist.disabledWarning": "Du hast die Whitelist nicht aktiviert. Die Änderungen werden erst berücksichtigt, wenn Du die Whitelist im Seitenmenü aktivierst.",
+      "ipWhitelist.disabledWarning": "Du hast die Whitelist nicht aktiviert. Die Änderungen werden erst berücksichtigt, wenn Du die Whitelist im Seitenmenü aktivierst.",
 
       "validation.fieldRequired": "Dieses Feld wird benötigt",
 
@@ -132,7 +132,7 @@
       "errors.credentialsInvalid": "Ungültiger Nutzername oder ungültiges Passwort",
       "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch",
       "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt",
-	  "errors.newPasswordIsWeak": "Das neue Password ist zu schwach. Es ist entweder zu kurz, enthält den Nutzernamen oder sich zu oft wiederholende Zeichen.",
+      "errors.newPasswordIsWeak": "Das neue Password ist zu schwach. Es ist entweder zu kurz, enthält den Nutzernamen oder sich zu oft wiederholende Zeichen.",
       "errors.default": "Ein unbekannter Fehler ist aufgetreten"
     }
   },
@@ -165,8 +165,8 @@
       "org": "Организация",
       "enabled": "ВКЛ",
       "disabled": "ВЫКЛ",
-	  "noData": "Нет данных",
-	  "warning": "Внимание",
+      "noData": "Нет данных",
+      "warning": "Внимание",
 
       "ipInfo.unavailable": "Не удалось получить информацию об этом IP-адресе.",
 
@@ -186,7 +186,7 @@
       "ipWhitelist.addIpAddress": "Добавить новый IP-адрес",
       "ipWhitelist.sureDelete": "Вы уверены, что хотите удалить {0} записей?",
       "ipWhitelist.cannotDisable": "Вы не можете отключить вайтлист IP из соображений безопасности. Пожалуйста, свяжитесь с нами, если у вас есть вопросы.",
-	  "ipWhitelist.disabledWarning": "Вы не включили вайтлист IP. Изменения, сделанные на этой странице, не вступят в силу, пока вы не включите вайтлист в панели слева.",
+      "ipWhitelist.disabledWarning": "Вы не включили вайтлист IP. Изменения, сделанные на этой странице, не вступят в силу, пока вы не включите вайтлист в панели слева.",
 
       "validation.fieldRequired": "Это поле является обязательным",
 
@@ -200,14 +200,14 @@
       "errors.credentialsInvalid": "Неверное имя пользователя или пароль",
       "errors.oldPasswordIsEqualToNew": "Пароли совпадают.",
       "errors.oldPasswordIsIncorrect": "Неверно введён текущий пароль.",
-	  "errors.newPasswordIsWeak": "Новый пароль недостаточно надёжен: он либо слишком короткий, либо содержит ваше имя, либо содержит недостаточно неповторяющихся символов.",
+      "errors.newPasswordIsWeak": "Новый пароль недостаточно надёжен: он либо слишком короткий, либо содержит ваше имя, либо содержит недостаточно неповторяющихся символов.",
       "errors.default": "Произошла неизвестная ошибка"
     }
   },
   {
     "name": "Suomalainen",
     "code": "fi",
-	"keys": {
+    "keys": {
       "helloWorld": "Hei maailma!",
       "reflexDevTeam": "Reflexin kehitystiimi (reflex.rip)",
       "reflex": "Reflex",
@@ -307,9 +307,9 @@
       "ipInfo.unavailable": "Il n'y a pas d'informations sur cette adresse IP",
 
       "dashboard.ipWhitelist": "Liste d'IP autorisees",
-      "dashboard.reflexStartupHistory": "Historique de demarrage de Reflex",
-      "dashboard.apiLoginHistory": "Historique de connection de l'API",
-      "dashboard.changeApiPassword": "Changer le mot de passe API",
+      "dashboard.reflexStartupHistory": "Historique de demarrage",
+      "dashboard.apiLoginHistory": "Historique de connection",
+      "dashboard.changeApiPassword": "Changer le mot de passe",
 
       "dashboard.loggedInAs": "Connecte en tant que {0} ({1})",
 
@@ -343,7 +343,7 @@
   {
     "name": "简体中文",
     "code": "zh",
-	"keys": {
+    "keys": {
       "helloWorld": "你好世界!",
       "reflexDevTeam": "Reflex开发团队 (reflex.rip)",
       "reflex": "Reflex",
@@ -443,9 +443,9 @@
       "ipInfo.unavailable": "Non ci sono informazioni disponibili riguardante questo indirizzo IP.",
 
       "dashboard.ipWhitelist": "IP Whitelist",
-      "dashboard.reflexStartupHistory": "Cronologia Avviamenti Reflex",
+      "dashboard.reflexStartupHistory": "Cronologia Avviamenti",
       "dashboard.apiLoginHistory": "Cronologia Accessi API",
-      "dashboard.changeApiPassword": "Cronologia Cambio Password Dell'API",
+      "dashboard.changeApiPassword": "Cronologia Passwords",
 
       "dashboard.loggedInAs": "Connesso come {0} ({1})",
 
@@ -453,7 +453,7 @@
       "login.notSpigotPass": "Non inserire la tua Password di Spigot qui!",
       "login.doLogin": "ENTRA",
 
-      "ipWhitelist.infoText": "In questo pannello puoi scegliere quale indirizzo IP può essere usato per lanciare il tuo Reflex. In questo modo puoi prevenire che la tua copia del Plugin di Reflex sia utilizzabile da persone esterne. Perfavore assicurati che gli indirizzi IP di tutti i server dove utilizzi Reflex siano inseriti in questa lista.",
+      "ipWhitelist.infoText": "In questo pannello puoi scegliere su quali indirizzi IP Reflex potrà essere utilizzato. In questo modo puoi prevenire che la tua copia del Plugin di Reflex sia utilizzabile da persone esterne. Perfavore assicurati che gli indirizzi IP di tutti i server dove utilizzi Reflex siano inseriti in questa lista.",
       "ipWhitelist.mustBeIp": "Perfavore inserisci un indirizzo IP valido",
       "ipWhitelist.addIpAddress": "Aggiungi un nuovo IP",
       "ipWhitelist.sureDelete": "Sei sicuro di voler eliminare {0} IP?",
@@ -579,7 +579,7 @@
         "ipInfo.unavailable": "Nie ma żadnych informacji na temat tego adresu IP.",
 
         "dashboard.ipWhitelist": "Whitelista IP",
-        "dashboard.reflexStartupHistory": "Historia uruchamiania Reflex",
+        "dashboard.reflexStartupHistory": "Historia uruchamiania",
         "dashboard.apiLoginHistory": "Historia logowania przez API",
         "dashboard.changeApiPassword": "Zmiana hasła API",
         "dashboard.loggedInAs": "Zalogowano jako {0} ({1})",
@@ -609,6 +609,74 @@
         "errors.oldPasswordIsIncorrect": "Aktualne hasło które wpisałeś jest nieprawidłowe.",
         "errors.newPasswordIsWeak": "Nowe hasło nie jest wystarczająco silne: jest albo zbyt krótkie, zawiera twoją nazwę użytkownika lub nie zawiera wystarczającej liczby nie powtarzających się symboli.",
         "errors.default": "Wystąpił nieznany błąd"
+    }
+  },
+  {
+    "name": "Norsk",
+    "code": "no",
+    "keys": {
+      "helloWorld": "Hei verden!",
+      "reflexDevTeam": "Reflex Utviklingsteam (reflex.rip)",
+      "reflex": "Reflex",
+      "signIn": "Logg Inn",
+      "spigotUsername": "Spigot Brukernavn",
+      "apiPassword": "API Passord",
+      "ipAddress": "IP adresse",
+      "add": "Legg til",
+      "cancel": "Avbryt",
+      "delete": "Slett",
+      "logout": "Logg ut",
+      "okay": "OK",
+      "timestamp": "Dato/Tid",
+      "browser": "Nettleser",
+      "operatingSystem": "Operativsystem",
+      "fullDateFormat": "DD.MM.YYYY [kl] HH:mm:ss",
+      "country": "Land",
+      "regionName": "Region",
+      "city": "By",
+      "zip": "Post kode",
+      "isp": "ISP",
+      "as": "AS",
+      "org": "Organisasjon",
+      "enabled": "PÅ",
+      "disabled": "AV",
+      "noData": "Ingen data",
+      "warning": "Advarsel",
+
+      "ipInfo.unavailable": "Det er ingen informasjon tilgjengelig om denne IP-adressen.",
+
+      "dashboard.ipWhitelist": "IP-hviteliste",
+      "dashboard.reflexStartupHistory": "Oppstarthistorikk for Refleks",
+      "dashboard.apiLoginHistory": "API-påloggingshistorie",
+      "dashboard.changeApiPassword": "Endre API-passord",
+
+      "dashboard.loggedInAs": "Logget inn som {0} ({1})",
+
+      "login.helloText": "Velkommen! I dette panelet kan du administrere dine Reflex-kontodetaljer, tilgang og mer. Hvis du har spørsmål, vennligst kontakt oss på Discord.",
+      "login.notSpigotPass": "Ikke skriv inn ditt Spigot-passordet her!",
+      "login.doLogin": "LOGG INN!",
+
+      "ipWhitelist.infoText": "I dette panelet kan du administrere hvilke IP-adresser som kan brukes til å starte Reflex. På denne måten kan du forhindre at reflex kopien din blir kompromittert. Forsikre deg om at alle IP-adressene til serverne du bruker Reflex på, er oppført her.",
+      "ipWhitelist.mustBeIp": "Vennligst tast inn en gyldig IP-adresse",
+      "ipWhitelist.addIpAddress": "Legg til en ny IP-adresse",
+      "ipWhitelist.sureDelete": "Er du sikker på at du vil slette {0} oppføringer?",
+      "ipWhitelist.cannotDisable": "Du har ikke lov til å deaktivere IP-hviteliste grunnet sikkerhetsmessige grunner. Kontakt oss for ytterligere informasjon.",
+      "ipWhitelist.disabledWarning": "Du har ikke aktivert IP-hviteliste. Endringer som er gjort på denne siden har ingen effekt før du aktiverer hvitelisten i panelet til venstre.",
+
+      "validation.fieldRequired": "Dette feltet er obligatorisk",
+
+      "passwordChange.infoText": "Endring av passord vil ugyldiggjøre alle de aktive API-øktene, og du må logge inn på nytt.",
+      "passwordChange.oldPassword": "Nåværende passord",
+      "passwordChange.newPassword": "Nytt passord",
+      "passwordChange.action": "Oppdater passord",
+      "passwordChange.success": "Ditt passord har blitt endret. Trykk 'OK' for å fortsette.",
+
+      "errors.sessionInvalid": "Ugyldig økt",
+      "errors.credentialsInvalid": "Ugyldig brukernavn eller passord",
+      "errors.oldPasswordIsEqualToNew": "Passordene er identiske.",
+      "errors.oldPasswordIsIncorrect": "Det nåværende passordet du oppga er feil.",
+      "errors.newPasswordIsWeak": "Det nye passordet er ikke sterkt nok: det er enten for kort, inneholder brukernavnet ditt eller inneholder ikke nok ikke-repeterende symboler.",
+      "errors.default": "En ukjent feil oppstod"
     }
   }
 ]
