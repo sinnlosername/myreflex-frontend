@@ -307,9 +307,9 @@
       "ipInfo.unavailable": "Il n'y a pas d'informations sur cette adresse IP",
 
       "dashboard.ipWhitelist": "Liste d'IP autorisees",
-      "dashboard.reflexStartupHistory": "Historique de demarrage de Reflex",
-      "dashboard.apiLoginHistory": "Historique de connection de l'API",
-      "dashboard.changeApiPassword": "Changer le mot de passe API",
+      "dashboard.reflexStartupHistory": "Historique de demarrage",
+      "dashboard.apiLoginHistory": "Historique de connection",
+      "dashboard.changeApiPassword": "Changer le mot de passe",
 
       "dashboard.loggedInAs": "Connecte en tant que {0} ({1})",
 
@@ -666,7 +666,7 @@
       "validation.fieldRequired": "Dette feltet er obligatorisk",
 
       "passwordChange.infoText": "Endring av passord vil ugyldiggjøre alle de aktive API-øktene, og du må logge inn på nytt.",
-      "passwordChange.oldPassword": "√ passord",
+      "passwordChange.oldPassword": "Nåværende passord",
       "passwordChange.newPassword": "Nytt passord",
       "passwordChange.action": "Oppdater passord",
       "passwordChange.success": "Ditt passord har blitt endret. Trykk 'OK' for å fortsette.",
