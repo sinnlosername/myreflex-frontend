@@ -96,8 +96,8 @@
       "isp": "ISP",
       "as": "AS",
       "org": "Organisation",
-      "enabled": "AN",
-      "disabled": "AUS",
+      "enabled": "An",
+      "disabled": "Aus",
       "noData": "Keine Daten",
       "warning": "Warnung",
 
