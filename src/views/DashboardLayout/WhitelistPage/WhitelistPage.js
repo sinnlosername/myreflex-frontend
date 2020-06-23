@@ -61,7 +61,7 @@ const WhitelistAdd = ({form}) => {
         name="ipAddresses"
         className={cls.addFormItem}
         rules={[ {validator: ipListValidator } ]}>
-        <Input placeholder={t("ipAddress")} size="large"/>
+        <Input ref={node => setTimeout(() => node && node.focus(), 100)} placeholder={t("ipAddress")} size="large" />
       </Form.Item>
     </Form>
   );
