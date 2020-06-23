@@ -25,13 +25,15 @@ const FullIpInfo = ({info}) => {
   const {t} = useTranslation();
   return (
     <Row>
-      {info["asn"].length === 0 && t("ipInfo.unavailable")}
-
-      <IpInfoCol name={t("country")} value={info["country"]}/>
-      <IpInfoCol name={t("city")} value={info["city"]}/>
-      <IpInfoCol name={t("zip")} value={info["post_code"]}/>
-      <IpInfoCol name={t("as")} value={info["asn"]}/>
-      <IpInfoCol name={t("hostname")} value={info["hostname"].length > 0 ? info["hostname"].substr(0, info["hostname"].length - 1) : ""}/>
+      {info["asn"].length === 0 ? t("ipInfo.unavailable") : (
+        <>
+          <IpInfoCol name={t("country")} value={info["country"]}/>
+          <IpInfoCol name={t("city")} value={info["city"]}/>
+          <IpInfoCol name={t("zip")} value={info["post_code"]}/>
+          <IpInfoCol name={t("as")} value={info["asn"]}/>
+          <IpInfoCol name={t("hostname")} value={info["hostname"].length > 0 ? info["hostname"].substr(0, info["hostname"].length - 1) : ""}/>
+        </>
+      )}
     </Row>
   );
 }
