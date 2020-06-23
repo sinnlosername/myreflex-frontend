@@ -4,7 +4,7 @@ import {callApi} from "../../../shared/api";
 import {WhitelistContext, WhitelistStatusContext} from "../../../shared/context";
 import ipRegex from "ip-regex";
 import cls from './WhitelistPage.module.less';
-import {IpInfoLoader} from "../IpInfo/IpInfo";
+import {IpInfo} from "../IpInfo/IpInfo";
 import {Trans, useTranslation} from "../../../shared/i18n";
 import ApiDataLoader from "../../../shared/ApiDataLoader";
 
@@ -129,7 +129,7 @@ const WhitelistTable = () => {
                onChange: setSelectedRowKeys
              }}
              expandable={{
-               expandedRowRender: record => (<IpInfoLoader endpoint={`/whitelist/ips/${record.ip}`} />)
+               expandedRowRender: record => (<IpInfo ip={record.ip} />)
              }}
              locale={{ emptyText: t("noData") }}
       />

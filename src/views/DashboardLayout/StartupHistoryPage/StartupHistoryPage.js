@@ -2,7 +2,7 @@ import React, {useContext} from "react";
 import {Table, Typography} from "antd";
 import {StartupHistoryContext} from "../../../shared/context";
 import dayjs from "dayjs";
-import {IpInfoLoader} from "../IpInfo/IpInfo";
+import {IpInfo} from "../IpInfo/IpInfo";
 import {useTranslation} from "../../../shared/i18n";
 import ApiDataLoader from "../../../shared/ApiDataLoader";
 
@@ -41,7 +41,7 @@ export const StartupHistoryTable = () => {
         showSizeChanger: false
       }}
       expandable={{
-        expandedRowRender: record => (<IpInfoLoader endpoint={`/history/reflex/${record.ipAddress}`} />)
+        expandedRowRender: record => (<IpInfo ip={record.ipAddress}/>)
       }}
       locale={{ emptyText: t("noData") }}
     >
