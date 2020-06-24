@@ -43,7 +43,7 @@
       "dashboard.loggedInAs": "Logged in as {0} ({1})",
 
       "login.helloText": "Welcome! In this panel you can manage your Reflex account details, access, and more. If you have any questions please contact us in Discord.",
-      "login.notSpigotPass": "Do not enter your Spigot password here!",
+      "login.notSpigotPass": "Do not enter your SpigotMC password here!",
       "login.doLogin": "LET'S GO",
 
       "ipWhitelist.infoText": "In this panel you can manage which IP addresses can be used to start your Reflex copy. This way you can prevent your copy from being compromised. Make sure IP addresses of all your servers where you use Reflex are listed here.",
@@ -111,7 +111,7 @@
       "dashboard.loggedInAs": "Angemeldet als {0} ({1})",
 
       "login.helloText": "Willkommen! In diesem Panel kannst Du deine Reflex-Account-Details, Zugriffsberechtigungen und mehr verwalten. Wenn Du Fragen oder Wünsche hast, schreibe uns gerne eine Nachricht auf Discord.",
-      "login.notSpigotPass": "Bitte nutze dafür nicht Dein Spigot-Passwort!",
+      "login.notSpigotPass": "Bitte nutze dafür nicht Dein SpigotMC-Passwort!",
       "login.doLogin": "LOS GEHTS",
 
       "ipWhitelist.infoText": "In diesem Panel kannst Du einstellen, welche IP-Adressen Deine Reflex-Version starten dürfen. Damit kannst Du verhindern, dass Deine Kopie von Reflex ohne Deine Erlaubnis genutzt wird. Denk daran, alle Server einzutragen, auf denen Du Reflex nutzt.",
@@ -179,7 +179,7 @@
       "dashboard.loggedInAs": "Вы вошли как {0} ({1})",
 
       "login.helloText": "Добро пожаловать! В этой панели вы можете управлять настройками вашей учётной записи Reflex, доступом к ней и пр. Если у вас есть какие-либо вопросы, пожалуйста, свяжитесь с нами в Discord.",
-      "login.notSpigotPass": "Не вводите пароль от вашей учётной записи Spigot!",
+      "login.notSpigotPass": "Не вводите пароль от вашей учётной записи SpigotMC!",
       "login.doLogin": "ПОЕХАЛИ",
 
       "ipWhitelist.infoText": "Здесь вы можете управлять IP-адресами, с которых можно запустить вашу копию Reflex. Это позволяет защитить вашу копию от попадания в нехорошие руки. Удостоверьтесь в том, что все IP-адреса ваших серверов, на которых вы используете Reflex, находятся в этом списке.",
@@ -315,7 +315,7 @@
       "dashboard.loggedInAs": "Connecte en tant que {0} ({1})",
 
       "login.helloText": "Bienvenue! Sur ce panneau de controle, vous pouvez changer les details de votre compte Reflex. Si vous avez des questions, demandez moi sur Discord.",
-      "login.notSpigotPass": "Ne pas entrer son mot de passe Spigot ici !",
+      "login.notSpigotPass": "Ne pas entrer son mot de passe SpigotMC ici !",
       "login.doLogin": "LET'S GO",
 
       "ipWhitelist.infoText": "Sur ce panneau, vous pouvez decider des addresses IP qui peuvent etre utilisees pour votre copie de Reflex. Comme ca, vous pouvez empecher votre copie de se faire compromettre. Faites attention que les adresses IP de tous vos serveurs soit autorises.",
@@ -451,7 +451,7 @@
       "dashboard.loggedInAs": "Connesso come {0} ({1})",
 
       "login.helloText": "Benvenuto! In questo pannello puoi gestire il tuo account Reflex, accessi e tanto altro. Se hai domande perfavore contattaci su Discord.",
-      "login.notSpigotPass": "Non inserire la tua Password di Spigot qui!",
+      "login.notSpigotPass": "Non inserire la tua Password di SpigotMC qui!",
       "login.doLogin": "ENTRA",
 
       "ipWhitelist.infoText": "In questo pannello puoi scegliere su quali indirizzi IP Reflex potrà essere utilizzato. In questo modo puoi prevenire che la tua copia del Plugin di Reflex sia utilizzabile da persone esterne. Perfavore assicurati che gli indirizzi IP di tutti i server dove utilizzi Reflex siano inseriti in questa lista.",
@@ -519,7 +519,7 @@
       "dashboard.loggedInAs": "{0} ({1}) olarak giriş yaptınız",
 
       "login.helloText": "Merhaba! Bu paneli kullanarak reflex hesap detaylarını ve daha fazlasını yönetebilirsin. Eğer sorun varsa lütfen bizimle Discord üzerinden iletişime geç.",
-      "login.notSpigotPass": "Buraya spigot şifrenizi girmeyin!",
+      "login.notSpigotPass": "Buraya SpigotMC şifrenizi girmeyin!",
       "login.doLogin": "Giriş Yap",
 
       "ipWhitelist.infoText": "Bu panelde hangi IP adreslerinin Reflex kopyanızı kullanabileceğini yönetebilirsiniz. Bu şekilde kopyanızın güvenliğini sağlayabilirsiniz. Reflex kullandığınız bütün sunucuların IP adreslerinin burada listelendiğinden emin olun.",
@@ -586,7 +586,7 @@
         "dashboard.loggedInAs": "Zalogowano jako {0} ({1})",
 
         "login.helloText": "Witaj! W tym panelu możesz zarządzać swoimi szczegółami konta Reflex, dostępem i więcej. Jeżeli masz jakieś pytania możesz skontaktować się z nami na Discordzie.",
-        "login.notSpigotPass": "Nie wpisuj tutaj swojego hasła Spigot!",
+        "login.notSpigotPass": "Nie wpisuj tutaj swojego hasła SpigotMC!",
         "login.doLogin": "LET'S GO",
 
         "ipWhitelist.infoText": "W tym panelu możesz zarządzać które adresy IP mogą być użyte aby wystartować twoją kopie Reflex. Dzięki temu możesz zapobiec kradzieży twojej kopi. Upewnij się że wszystkie adresy IP serwerów na których używasz Reflex są tutaj dodane.",
@@ -654,7 +654,7 @@
       "dashboard.loggedInAs": "Logget inn som {0} ({1})",
 
       "login.helloText": "Velkommen! I dette panelet kan du administrere dine Reflex-kontodetaljer, tilgang og mer. Hvis du har spørsmål, vennligst kontakt oss på Discord.",
-      "login.notSpigotPass": "Ikke skriv inn ditt Spigot-passordet her!",
+      "login.notSpigotPass": "Ikke skriv inn ditt SpigotMC-passordet her!",
       "login.doLogin": "LOGG INN!",
 
       "ipWhitelist.infoText": "I dette panelet kan du administrere hvilke IP-adresser som kan brukes til å starte Reflex. På denne måten kan du forhindre at reflex kopien din blir kompromittert. Forsikre deg om at alle IP-adressene til serverne du bruker Reflex på, er oppført her.",
