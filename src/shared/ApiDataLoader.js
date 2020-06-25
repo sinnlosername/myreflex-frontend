@@ -36,7 +36,8 @@ export default class ApiDataLoader extends React.Component {
         if (errorCode === "SESSION_INVALID") {
           this.setState({data: null, error: (<Redirect to="../login"/>)});
         } else {
-          this.setState({data: null, error: this.props["prettyError"] ? (<Alert message={error} type="error" showIcon />) : error});
+          this.setState({data: null, error: this.props["prettyError"] ?
+              (<Alert message={error} type="error" showIcon banner />) : error});
         }
       });
   }
