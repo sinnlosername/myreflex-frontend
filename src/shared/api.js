@@ -47,7 +47,7 @@ function extractError({status, errorCode}, getTranslation) {
     case "NEW_PASSWORD_IS_WEAK":
       return getTranslation("errors.newPasswordIsWeak");
     case "IP_IS_IN_PRIVATE_NETWORK":
-      return getTranslation("errors.isInPrivateNetwork");
+      return getTranslation("errors.ipInfoUnavailable");
     default:
       return getTranslation("errors.default");
   }

@@ -32,9 +32,7 @@
       "noData": "No data",
       "warning": "Warning",
       "hostname": "Hostname",
-
-      "ipInfo.unavailable": "There is no information available about this IP address.",
-
+      
       "dashboard.ipWhitelist": "IP Whitelist",
       "dashboard.reflexStartupHistory": "Reflex Startup History",
       "dashboard.apiLoginHistory": "API Login History",
@@ -66,7 +64,7 @@
       "errors.oldPasswordIsEqualToNew": "The passwords are identical.",
       "errors.oldPasswordIsIncorrect": "The current password you entered is incorrect.",
       "errors.newPasswordIsWeak": "The new password is not strong enough: it is either too short, contains your username, or does not contain enough non-repetitive symbols.",
-      "errors.isInPrivateNetwork": "No information could be queried for this ip address, because it is located in a private network.",
+      "errors.ipInfoUnavailable": "There is no information available about this IP address.",
       "errors.default": "An unknown error occurred"
     }
   },
@@ -102,7 +100,6 @@
       "noData": "Keine Daten",
       "warning": "Warnung",
 
-      "ipInfo.unavailable": "Zu dieser IP-Adresse sind keine Informationen verfügbar.",
 
       "dashboard.ipWhitelist": "IP Whitelist",
       "dashboard.reflexStartupHistory": "Reflex-Startverlauf",
@@ -135,6 +132,7 @@
       "errors.oldPasswordIsEqualToNew": "Die Passwörter sind identisch",
       "errors.oldPasswordIsIncorrect": "Das alte Passwort ist nicht korrekt",
       "errors.newPasswordIsWeak": "Das neue Password ist zu schwach. Es ist entweder zu kurz, enthält den Nutzernamen oder sich zu oft wiederholende Zeichen.",
+      "errors.ipInfoUnavailable": "Zu dieser IP-Adresse sind keine Informationen verfügbar.",
       "errors.default": "Ein unbekannter Fehler ist aufgetreten"
     }
   },
@@ -170,8 +168,6 @@
       "noData": "Нет данных",
       "warning": "Внимание",
 
-      "ipInfo.unavailable": "Не удалось получить информацию об этом IP-адресе.",
-
       "dashboard.ipWhitelist": "Вайтлист IP",
       "dashboard.reflexStartupHistory": "История запусков Reflex",
       "dashboard.apiLoginHistory": "История входов в API",
@@ -203,6 +199,7 @@
       "errors.oldPasswordIsEqualToNew": "Пароли совпадают.",
       "errors.oldPasswordIsIncorrect": "Неверно введён текущий пароль.",
       "errors.newPasswordIsWeak": "Новый пароль недостаточно надёжен: он либо слишком короткий, либо содержит ваше имя, либо содержит недостаточно неповторяющихся символов.",
+      "errors.ipInfoUnavailable": "Не удалось получить информацию об этом IP-адресе.",
       "errors.default": "Произошла неизвестная ошибка"
     }
   },
@@ -238,8 +235,6 @@
       "noData": "Ei tietoa",
       "warning": "Varoitus",
 
-      "ipInfo.unavailable": "Tästä IP-osoitteesta ei löytynyt tietoa.",
-
       "dashboard.ipWhitelist": "IP-valkolista",
       "dashboard.reflexStartupHistory": "Reflex Käynnistys historia",
       "dashboard.apiLoginHistory": "API kirjautumis historia",
@@ -271,6 +266,7 @@
       "errors.oldPasswordIsEqualToNew": "Salasanat ovat identtiset.",
       "errors.oldPasswordIsIncorrect": "Nykyinen salasana jonka kirjotit ei ole kelvollinen.",
       "errors.newPasswordIsWeak": "Uusi salasanasi ei ole tarpeeksi turvallinen: se on joko liian lyhyt, sisältää käyttäjänimesi, tai sisältää liian paljon toistuvia kirjaimia.",
+      "errors.ipInfoUnavailable": "Tästä IP-osoitteesta ei löytynyt tietoa.",
       "errors.default": "Tuntematon virhe tapahtui"
     }
   },
@@ -306,8 +302,6 @@
       "noData": "Pas de donnees",
       "warning": "Attention",
 
-      "ipInfo.unavailable": "Il n'y a pas d'informations sur cette adresse IP",
-
       "dashboard.ipWhitelist": "Liste d'IP autorisees",
       "dashboard.reflexStartupHistory": "Historique de demarrage",
       "dashboard.apiLoginHistory": "Historique de connection",
@@ -339,6 +333,7 @@
       "errors.oldPasswordIsEqualToNew": "Les mots de passe sont egaux",
       "errors.oldPasswordIsIncorrect": "Le mot de passe actuel est incorrect",
       "errors.newPasswordIsWeak": "Le nouveau mot de passe n'est pas assez securise. Il ne peut pas contenir votre nom d'utilisateur ou des symboles repetes.",
+      "errors.ipInfoUnavailable": "Il n'y a pas d'informations sur cette adresse IP",
       "errors.default": "Une erreur inconnue s'est produite"
     }
   },
@@ -374,8 +369,6 @@
       "noData": "没有数据",
       "warning": "警告",
 
-      "ipInfo.unavailable": "没有有关此IP地址的信息.",
-
       "dashboard.ipWhitelist": "IP白名单",
       "dashboard.reflexStartupHistory": "Reflex启动记录",
       "dashboard.apiLoginHistory": "API登录记录",
@@ -407,6 +400,7 @@
       "errors.oldPasswordIsEqualToNew": "新的密码与你当前使用的密码相同!",
       "errors.oldPasswordIsIncorrect": "您输入的当前密码不正确.",
       "errors.newPasswordIsWeak": "新的密码不安全: 密码太短 , 包含你的用户名 或 没有足够的非重复符号.",
+      "errors.ipInfoUnavailable": "没有有关此IP地址的信息.",
       "errors.default": "发生未知错误"
     }
   },
@@ -442,8 +436,6 @@
       "noData": "No data",
       "warning": "Attenzione",
 
-      "ipInfo.unavailable": "Non ci sono informazioni disponibili riguardante questo indirizzo IP.",
-
       "dashboard.ipWhitelist": "IP Whitelist",
       "dashboard.reflexStartupHistory": "Cronologia Avviamenti",
       "dashboard.apiLoginHistory": "Cronologia Accessi API",
@@ -475,6 +467,7 @@
       "errors.oldPasswordIsEqualToNew": "Le password sono identiche.",
       "errors.oldPasswordIsIncorrect": "La vecchia Password non è valida.",
       "errors.newPasswordIsWeak": "La nuova password non è abbastanza sicura: È troppo corta, oppure contiene il tuo nome utente o non contiene abbastanza simboli non ripetitivi.",
+      "errors.ipInfoUnavailable": "Non ci sono informazioni disponibili riguardante questo indirizzo IP.",
       "errors.default": "Si è verificato un errore sconosciuto"
     }
   },
@@ -510,8 +503,6 @@
       "noData": "Veri yok",
       "warning": "Uyarı",
 
-      "ipInfo.unavailable": "Bu IP adresi hakkında mevcut bir bilgi yok.",
-
       "dashboard.ipWhitelist": "IP Beyaz Liste",
       "dashboard.reflexStartupHistory": "Reflex Başlangıç Geçmişi",
       "dashboard.apiLoginHistory": "API Giriş Geçmişi",
@@ -543,6 +534,7 @@
       "errors.oldPasswordIsEqualToNew": "Girdiğiniz şifre eski şifrenizle aynı.",
       "errors.oldPasswordIsIncorrect": "Girdiğiniz mevcut şifre yanlış.",
       "errors.newPasswordIsWeak": "Yeni şifre yeterince güvenli değil: ya çok kısa, ya kullanıcı adınızı içeriyor, ya da kendini tekrar eden karakterler içeriyor.",
+      "errors.ipInfoUnavailable": "Bu IP adresi hakkında mevcut bir bilgi yok.",
       "errors.default": "Bilinmeyen bir hata oluştu"
     }
   },
@@ -578,8 +570,6 @@
         "noData": "Brak danych",
         "warning": "Ostrzeżenie",
 
-        "ipInfo.unavailable": "Nie ma żadnych informacji na temat tego adresu IP.",
-
         "dashboard.ipWhitelist": "Whitelista IP",
         "dashboard.reflexStartupHistory": "Historia uruchamiania",
         "dashboard.apiLoginHistory": "Historia logowania przez API",
@@ -610,6 +600,7 @@
         "errors.oldPasswordIsEqualToNew": "Hasła są identyczne.",
         "errors.oldPasswordIsIncorrect": "Aktualne hasło które wpisałeś jest nieprawidłowe.",
         "errors.newPasswordIsWeak": "Nowe hasło nie jest wystarczająco silne: jest albo zbyt krótkie, zawiera twoją nazwę użytkownika lub nie zawiera wystarczającej liczby nie powtarzających się symboli.",
+        "errors.ipInfoUnavailable": "Nie ma żadnych informacji na temat tego adresu IP.",
         "errors.default": "Wystąpił nieznany błąd"
     }
   },
@@ -645,8 +636,6 @@
       "noData": "Ingen data",
       "warning": "Advarsel",
 
-      "ipInfo.unavailable": "Det er ingen informasjon tilgjengelig om denne IP-adressen.",
-
       "dashboard.ipWhitelist": "IP-hviteliste",
       "dashboard.reflexStartupHistory": "Oppstarthistorikk for Refleks",
       "dashboard.apiLoginHistory": "API-påloggingshistorie",
@@ -678,6 +667,7 @@
       "errors.oldPasswordIsEqualToNew": "Passordene er identiske.",
       "errors.oldPasswordIsIncorrect": "Det nåværende passordet du oppga er feil.",
       "errors.newPasswordIsWeak": "Det nye passordet er ikke sterkt nok: det er enten for kort, inneholder brukernavnet ditt eller inneholder ikke nok ikke-repeterende symboler.",
+      "errors.ipInfoUnavailable": "Det er ingen informasjon tilgjengelig om denne IP-adressen.",
       "errors.default": "En ukjent feil oppstod"
     }
   }
