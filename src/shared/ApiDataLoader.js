@@ -1,6 +1,6 @@
 import React from "react";
 import {Redirect} from "react-router-dom";
-import {Spin} from "antd";
+import {Alert, Spin} from "antd";
 import {callApi} from "./api";
 import {TranslationContext} from "./context";
 
@@ -36,7 +36,7 @@ export default class ApiDataLoader extends React.Component {
         if (errorCode === "SESSION_INVALID") {
           this.setState({data: null, error: (<Redirect to="../login"/>)});
         } else {
-          this.setState({data: null, error: "Unable to fetch data from api"});
+          this.setState({data: null, error: this.props["prettyError"] ? (<Alert message={error} type="error" showIcon />) : error});
         }
       });
   }

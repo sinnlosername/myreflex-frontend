@@ -1,23 +1,15 @@
-import React, {useEffect, useState} from "react";
-import {Spin, Typography, Col, Row} from "antd";
+import React from "react";
+import {Typography, Col, Row} from "antd";
 import {useTranslation} from "../../../shared/i18n";
+import ApiDataLoader from "../../../shared/ApiDataLoader";
 
-export const IpInfo = ({ip}) => {
-  const [info, setInfo] = useState(null);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetch(`https://ip.nf/${ip}.json`)
-      .then(resp => resp.json())
-      .then(data => setInfo(data))
-      .catch(error => setError(error))
-  }, [ip]);
-
+export const IpInfo = ({endpoint, ip}) => {
   return (
-    <Spin spinning={info == null && error == null}>
-      {error != null && error}
-      {info != null && (<FullIpInfo info={info.ip} />)}
-    </Spin>
+    <ApiDataLoader endpoint={`${endpoint}/${ip}`} inline prettyError>
+      {({data}) => (
+        <FullIpInfo info={data} />
+      )}
+    </ApiDataLoader>
   );
 }
 
@@ -25,15 +17,9 @@ const FullIpInfo = ({info}) => {
   const {t} = useTranslation();
   return (
     <Row>
-      {info["asn"].length === 0 ? t("ipInfo.unavailable") : (
-        <>
-          <IpInfoCol name={t("country")} value={info["country"]}/>
-          <IpInfoCol name={t("city")} value={info["city"]}/>
-          <IpInfoCol name={t("zip")} value={info["post_code"]}/>
-          <IpInfoCol name={t("as")} value={info["asn"]}/>
-          <IpInfoCol name={t("hostname")} value={info["hostname"].length > 0 ? info["hostname"].substr(0, info["hostname"].length - 1) : ""}/>
-        </>
-      )}
+      <IpInfoCol name={t("org")} value={info["organization_name"]}/>
+      <IpInfoCol name={t("as")} value={String(info["asn"])}/>
+      <IpInfoCol name={t("country")} value={info["country"]}/>
     </Row>
   );
 }

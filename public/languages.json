@@ -66,6 +66,7 @@
       "errors.oldPasswordIsEqualToNew": "The passwords are identical.",
       "errors.oldPasswordIsIncorrect": "The current password you entered is incorrect.",
       "errors.newPasswordIsWeak": "The new password is not strong enough: it is either too short, contains your username, or does not contain enough non-repetitive symbols.",
+      "errors.isInPrivateNetwork": "No information could be queried for this ip address, because it is located in a private network.",
       "errors.default": "An unknown error occurred"
     }
   },

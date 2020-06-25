@@ -129,7 +129,7 @@ const WhitelistTable = () => {
                onChange: setSelectedRowKeys
              }}
              expandable={{
-               expandedRowRender: record => (<IpInfo ip={record.ip} />)
+               expandedRowRender: record => (<IpInfo endpoint="/whitelist/ips" ip={record.ip} />)
              }}
              locale={{ emptyText: t("noData") }}
       />
