@@ -20,6 +20,8 @@ const FullIpInfo = ({info}) => {
       <IpInfoCol name={t("org")} value={info["organization_name"]}/>
       <IpInfoCol name={t("as")} value={String(info["asn"])}/>
       <IpInfoCol name={t("country")} value={info["country"]}/>
+      <IpInfoCol name={t("regionName")} value={info["region"]}/>
+      <IpInfoCol name={t("city")} value={info["city"]}/>
     </Row>
   );
 }
