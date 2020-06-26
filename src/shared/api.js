@@ -1,13 +1,9 @@
 const API_URL = "https://my.reflex.rip/api/v1";
 
-export async function callApi(method, endpoint, requestData, setSpinning = () => {}, getTranslation) {
-  if (getTranslation == null) {
-    throw new Error("Translation function missing");
-  }
-
+export async function callApi(method, endpoint, requestData, setSpinning = () => {}) {
   setSpinning(true);
 
-  const result = await doRestCall(method, endpoint, requestData, getTranslation);
+  const result = await doRestCall(method, endpoint, requestData);
 
   if (result.error != null) {
     setSpinning(false);
@@ -16,7 +12,7 @@ export async function callApi(method, endpoint, requestData, setSpinning = () =>
   return result;
 }
 
-async function doRestCall(method, endpoint, requestData, getTranslation) {
+async function doRestCall(method, endpoint, requestData) {
   try {
     const isLocalTest = process.env.NODE_ENV === "development";
     const data = await fetch(API_URL + endpoint, {
@@ -25,30 +21,23 @@ async function doRestCall(method, endpoint, requestData, getTranslation) {
       credentials: (isLocalTest ? 'include' : undefined)
     }).then(response => response.json());
 
-    return {data, errorCode: data.errorCode, error: extractError(data, getTranslation)};
+    return {data, errorCode: data.errorCode, error: extractError(data)};
   } catch (e) {
     console.error(e);
     return {error: "Internal error - " + e.message}
   }
 }
 
-function extractError({status, errorCode}, getTranslation) {
-  if (status !== "error") return;
+const errorMapping = {
+  "SESSION_INVALID": "errors.sessionInvalid",
+  "CREDENTIALS_INVALID": "errors.credentialsInvalid",
+  "OLD_PASSWORD_IS_THE_SAME_AS_NEW": "errors.oldPasswordIsEqualToNew",
+  "OLD_PASSWORD_IS_INCORRECT": "errors.oldPasswordIsIncorrect",
+  "NEW_PASSWORD_IS_WEAK": "errors.newPasswordIsWeak",
+  "IP_IS_IN_PRIVATE_NETWORK": "errors.ipInfoUnavailable"
+}
 
-  switch (errorCode) {
-    case "SESSION_INVALID":
-      return getTranslation("errors.sessionInvalid");
-    case "CREDENTIALS_INVALID":
-      return getTranslation("errors.credentialsInvalid");
-    case "OLD_PASSWORD_IS_THE_SAME_AS_NEW":
-      return getTranslation("errors.oldPasswordIsEqualToNew");
-    case "OLD_PASSWORD_IS_INCORRECT":
-      return getTranslation("errors.oldPasswordIsIncorrect");
-    case "NEW_PASSWORD_IS_WEAK":
-      return getTranslation("errors.newPasswordIsWeak");
-    case "IP_IS_IN_PRIVATE_NETWORK":
-      return getTranslation("errors.ipInfoUnavailable");
-    default:
-      return getTranslation("errors.default");
-  }
+function extractError({status, errorCode}) {
+  if (status !== "error") return;
+  return errorMapping[errorCode] ?? "errors.default";
 }

@@ -1,4 +1,4 @@
-import {useTranslation} from "../../../shared/i18n";
+import {Trans, useTranslation} from "../../../shared/i18n";
 import React, {useContext, useState} from "react";
 import {callApi} from "../../../shared/api";
 import {Modal, Switch as AntSwitch} from "antd";
@@ -22,7 +22,7 @@ export const WhitelistSwitch = () => {
     }
 
     if (result.error != null && !["ALREADY_ENABLED", "ALREADY_DISABLED"].includes(result.errorCode)) {
-      setError(result);
+      setError(<Trans name={result.error} />);
     }
   }
 
@@ -30,7 +30,7 @@ export const WhitelistSwitch = () => {
     <AntSwitch className={cls.whitelistSwitch} checked={checked} loading={loading}
                checkedChildren={t("enabled")} unCheckedChildren={t("disabled")} size={"small"}
                onChange={newChecked => {
-                 callApi(newChecked ? "POST" : "DELETE", "/whitelist", {}, setLoading, t)
+                 callApi(newChecked ? "POST" : "DELETE", "/whitelist", {}, setLoading)
                    .then(handleChangeResult)
                    .then(checkedValue => {
                      setLoading(false);

@@ -15,7 +15,7 @@ export const PasswordPage = () => {
 
   function onResponse(result) {
     if (result.error != null) {
-      setError(result.error);
+      setError(<Trans name={result.error} />);
       return;
     }
 
@@ -29,7 +29,7 @@ export const PasswordPage = () => {
   return (
     <Spin spinning={spinning}>
       <Form name="passwordChange"
-            onFinish={formData => callApi("POST", "/auth/password", formData, setSpinning, t).then(onResponse)}
+            onFinish={formData => callApi("POST", "/auth/password", formData, setSpinning).then(onResponse)}
             className={cls.form}>
         <Typography.Title level={2}>
           {t("dashboard.changeApiPassword")}

@@ -89,7 +89,7 @@ const WhitelistTable = () => {
       onOk: () => addForm.validateFields()
         .then(fields => callApi("PATCH", "/whitelist/ips", {
           add: fields.ipAddresses.split(",").map(value => value.trim())
-        }, undefined, t))
+        }, undefined))
         .then(() => reloadData())
     });
   }
@@ -102,7 +102,7 @@ const WhitelistTable = () => {
       cancelText: t("cancel"),
       onOk: () => callApi("PATCH", "/whitelist/ips", {
         remove: selectedRowKeys.map(key => data.entries[key])
-      }, undefined, t)
+      }, undefined)
         .then(() => setSelectedRowKeys([]))
         .then(() => reloadData())
     });

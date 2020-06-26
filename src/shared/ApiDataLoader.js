@@ -3,6 +3,7 @@ import {Redirect} from "react-router-dom";
 import {Alert, Spin} from "antd";
 import {callApi} from "./api";
 import {TranslationContext} from "./context";
+import {Trans} from "./i18n";
 
 export default class ApiDataLoader extends React.Component {
   static contextType = TranslationContext;
@@ -25,7 +26,7 @@ export default class ApiDataLoader extends React.Component {
   }
 
   reloadData() {
-    callApi("GET", this.props.endpoint, undefined, undefined, this.context.t)
+    callApi("GET", this.props.endpoint, undefined, undefined)
       .then(({data, error, errorCode}) => {
         if (this.unmounted) return;
         if (error == null) {
@@ -36,8 +37,10 @@ export default class ApiDataLoader extends React.Component {
         if (errorCode === "SESSION_INVALID") {
           this.setState({data: null, error: (<Redirect to="../login"/>)});
         } else {
+          const errorComponent = (<Trans name={error} />);
           this.setState({data: null, error: this.props["prettyError"] ?
-              (<Alert message={error} type="error" showIcon banner />) : error});
+              (<Alert message={errorComponent} type="error" showIcon banner />)
+              : errorComponent});
         }
       });
   }

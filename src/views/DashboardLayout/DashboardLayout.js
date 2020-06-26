@@ -76,7 +76,7 @@ const HeaderMenu = () => {
     <Spin spinning={spinning}>
       <Menu>
         <Menu.Item key="logout" onClick={() => {
-          callApi("DELETE", "/auth/me", {}, setSpinning, t)
+          callApi("DELETE", "/auth/me", {}, setSpinning)
             .then(() => history.push("../login"))
         }}>
           {t("logout")}

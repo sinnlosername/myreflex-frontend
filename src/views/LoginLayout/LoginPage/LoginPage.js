@@ -4,7 +4,7 @@ import {Spin, Form, Col, Row, Typography, Input, Button} from "antd";
 import cls from './LoginPage.module.less'
 import {callApi} from "../../../shared/api.js";
 import {useHistory} from "react-router-dom";
-import {useTranslation} from "../../../shared/i18n";
+import {Trans, useTranslation} from "../../../shared/i18n";
 import {FormError} from "../../../shared/FormError";
 import {showPasswordIconRender} from "../../../shared/misc";
 
@@ -32,7 +32,7 @@ const LoginForm = () => {
 
   function onResponse({error, errorCode}) {
     if (error != null && errorCode !== "ALREADY_AUTHENTICATED") {
-      setError(error);
+      setError(<Trans name={error} />);
       return;
     }
 
@@ -45,7 +45,7 @@ const LoginForm = () => {
             onFinish={formData => callApi("POST", "/auth", {
               ...formData,
               cookie: true
-            }, setSpinning, t).then(onResponse)}
+            }, setSpinning).then(onResponse)}
             className={cls.form}>
         <Typography.Title level={2} className={cls.formTitle}>
           {t("signIn")}
