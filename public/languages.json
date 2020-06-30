@@ -439,7 +439,7 @@
       "dashboard.ipWhitelist": "IP Whitelist",
       "dashboard.reflexStartupHistory": "Cronologia Avviamenti",
       "dashboard.apiLoginHistory": "Cronologia Accessi API",
-      "dashboard.changeApiPassword": "Cronologia Passwords",
+      "dashboard.changeApiPassword": "Cambia Password",
 
       "dashboard.loggedInAs": "Connesso come {0} ({1})",
 
