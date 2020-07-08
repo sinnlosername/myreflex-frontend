@@ -539,7 +539,7 @@
     }
   },
   {
-    "name": "Polskie",
+    "name": "Polski",
     "code": "pl",
     "keys": {
         "helloWorld": "Witaj świecie!",
