@@ -16,14 +16,14 @@
     "url": "https://github.com/sinnlosername/myreflex-frontend.git"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.28",
-    "@fortawesome/free-brands-svg-icons": "^5.13.0",
-    "@fortawesome/free-solid-svg-icons": "^5.13.0",
-    "@fortawesome/react-fontawesome": "^0.1.10",
+    "@fortawesome/fontawesome-svg-core": "^1.2.30",
+    "@fortawesome/free-brands-svg-icons": "^5.14.0",
+    "@fortawesome/free-solid-svg-icons": "^5.14.0",
+    "@fortawesome/react-fontawesome": "^0.1.11",
     "@types/react-router-dom": "^5.1.5",
-    "antd": "^4.3.1",
-    "bowser": "^2.9.0",
-    "dayjs": "^1.8.28",
+    "antd": "^4.4.2",
+    "bowser": "^2.10.0",
+    "dayjs": "^1.8.29",
     "ip-regex": "^4.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -32,15 +32,15 @@
   },
   "devDependencies": {
     "customize-cra": "^1.0.0",
-    "gzipper": "^3.7.0",
-    "less": "^3.11.3",
-    "less-loader": "^6.1.1",
+    "gzipper": "^4.0.1",
+    "less": "^3.12.2",
+    "less-loader": "^6.2.0",
     "react-app-rewired": "^2.1.6"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
-    "post-build": "gzipper --gzip-level 9 --exclude map,png,ico build/",
+    "post-build": "gzipper c --level 9 --exclude map,png,ico build/",
     "test": "react-app-rewired test",
     "eject": "react-scripts eject",
     "translate": "node ./dev/translate.js"
