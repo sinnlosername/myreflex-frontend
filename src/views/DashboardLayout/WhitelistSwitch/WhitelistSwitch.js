@@ -8,7 +8,7 @@ import {WhitelistStatusContext} from "../../../shared/context";
 export const WhitelistSwitch = () => {
   const {t} = useTranslation();
   const {data: {information}, reloadData} = useContext(WhitelistStatusContext);
-  const [checked, setChecked] = useState(information === "enabled");
+  const [checked, setChecked] = useState(information?.toLowerCase() === "enabled");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
 

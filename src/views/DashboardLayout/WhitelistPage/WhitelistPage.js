@@ -20,7 +20,7 @@ export const WhitelistPage = () => {
       <Trans name="ipWhitelist.infoText" component={Text}/>
       <br/>
 
-      {information === "disabled" && (
+      {information?.toLowerCase() === "disabled" && (
         <>
           <br />
           <Alert message={t("warning")} description={t("ipWhitelist.disabledWarning")} type="warning" banner showIcon />
