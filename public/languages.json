@@ -112,7 +112,7 @@
       "login.notSpigotPass": "Bitte nutze dafür nicht Dein SpigotMC-Passwort!",
       "login.doLogin": "LOS GEHTS",
 
-      "ipWhitelist.infoText": "In diesem Panel kannst Du einstellen, welche IP-Adressen Deine Reflex-Version starten dürfen. Damit kannst Du verhindern, dass Deine Kopie von Reflex ohne Deine Erlaubnis genutzt wird. Denk daran, alle Server einzutragen, auf denen Du Reflex nutzt.",
+      "ipWhitelist.infoText": "In diesem Panel kannst Du einstellen, welche IP-Adressen Deine Reflex-Version starten dürfen. Damit kannst Du verhindern, dass Deine Kopie von Reflex ohne Deine Erlaubnis genutzt wird. Denk daran alle Server einzutragen, auf denen Du Reflex nutzt.",
       "ipWhitelist.mustBeIp": "Deine Eingabe muss eine gültige IP-Adresse sein.",
       "ipWhitelist.addIpAddress": "Neue IP-Adresse hinzufügen",
       "ipWhitelist.sureDelete": "Bist Du Dir sicher, dass Du {0} Einträge löschen möchtest?",
@@ -121,7 +121,7 @@
 
       "validation.fieldRequired": "Dieses Feld wird benötigt",
 
-      "passwordChange.infoText": "Die Änderung Deines Passworts wird alle laufenden API-Sitzungen beenden, daher musst Du Dich nach Änderung erneut anmelden.",
+      "passwordChange.infoText": "Die Änderung Deines Passworts wird alle laufenden API-Sitzungen beenden, daher musst Du Dich nach der Änderung erneut anmelden.",
       "passwordChange.oldPassword": "Altes Passwort",
       "passwordChange.newPassword": "Neues Passwort",
       "passwordChange.action": "Passwort ändern",
