@@ -25,8 +25,10 @@ export const Footer = () => {
           © {new Date().getFullYear()} - {t("reflexDevTeam")}
         </Col>
         <Col span={6}>
+          <Button className={classes.footerDiscordLink} type="link" href="https://g.reflex.rip/api-docs"
+                  target="_blank">{t("apiDocumentation")}</Button>
           <Button className={classes.footerDiscordLink} type="link" href="https://g.reflex.rip/discord"
-                  target="_blank">Discord</Button>
+            target="_blank">Discord</Button>
         </Col>
       </Row>
     </Layout.Footer>

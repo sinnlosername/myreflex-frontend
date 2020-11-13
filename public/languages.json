@@ -32,6 +32,7 @@
       "noData": "No data",
       "warning": "Warning",
       "hostname": "Hostname",
+      "apiDocumentation": "API Documentation",
       
       "dashboard.ipWhitelist": "IP Whitelist",
       "dashboard.reflexStartupHistory": "Reflex Startup History",
@@ -99,6 +100,7 @@
       "disabled": "Aus",
       "noData": "Keine Daten",
       "warning": "Warnung",
+      "apiDocumentation": "API-Dokumentation",
 
 
       "dashboard.ipWhitelist": "IP Whitelist",
@@ -167,6 +169,7 @@
       "disabled": "ВЫКЛ",
       "noData": "Нет данных",
       "warning": "Внимание",
+      "apiDocumentation": "Документация API",
 
       "dashboard.ipWhitelist": "Вайтлист IP",
       "dashboard.reflexStartupHistory": "История запусков Reflex",
